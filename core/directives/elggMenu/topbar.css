@@ -1,0 +1,39 @@
+.elgg-menu-topbar {
+	float: left;
+}
+
+.elgg-menu-topbar > li {
+	float: left;
+}
+
+.elgg-menu-topbar > li > a {
+	padding-top: 2px;
+	color: #eee;
+	margin: 1px 15px 0;
+}
+
+.elgg-menu-topbar > li > a: hover, .elgg-menu-topbar > li > a: focus {
+	color: #4690D6;
+	text-decoration: none;
+}
+
+.elgg-menu-topbar-alt {
+	float: right;
+}
+
+.elgg-menu-topbar .elgg-icon {
+	vertical-align: middle;
+	margin-top: -1px;
+}
+
+.elgg-menu-topbar > li > a.elgg-topbar-logo {
+	margin-top: 0;
+	padding-left: 5px;
+	width: 38px;
+	height: 20px;
+}
+
+.elgg-menu-topbar > li > a.elgg-topbar-avatar {
+	width: 18px;
+	height: 18px;
+}

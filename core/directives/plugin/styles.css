@@ -1,0 +1,118 @@
+.elgg-plugin {
+	border: 1px solid #999;
+	margin: 0 0 5px;
+	padding: 0 7px 4px 10px;
+	border-radius: 5px;
+}
+
+.elgg-plugin.elgg-state-draggable > .elgg-image-block .elgg-head {
+	cursor: move;
+}
+
+.elgg-plugin p {
+	margin: 0;
+}
+
+.elgg-plugin h3 {
+	color: black;
+	padding-bottom: 10px;
+}
+
+.elgg-plugin-settings {
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.elgg-plugin-screenshot {
+	display: inline;
+}
+
+.elgg-plugin-screenshot img {
+	border: 1px solid #999;
+}
+
+.elgg-plugin-screenshot-lightbox {
+	display: block;
+	position: absolute;
+	width: 99%;
+	text-align: center;
+	background-color: white;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.elgg-plugin-screenshot-lightbox h2 {
+	color: black;
+}
+
+.elgg-plugin-contributors {
+	list-style-position: inside;
+	list-style-type: circle;
+}
+
+.elgg-plugin-contributors li {
+	font-style: italic;
+}
+
+.elgg-plugin-contributors dl,
+.elgg-plugin-contributors dd {
+	display: inline;
+	padding-right: 5px;
+}
+
+.elgg-plugin-contributors dt {
+	display: none;
+}
+
+.elgg-plugin-contributors dd: after {
+	content: ', ';
+}
+
+.elgg-plugin-contributors dd.elgg-plugin-contributor-name: after {
+	content: ' - ';
+}
+
+.elgg-plugin-contributors dd.elgg-plugin-contributor-description: after {
+	content: '';
+}
+
+.elgg-plugin.elgg-state-active {
+	background: white;
+}
+
+.elgg-plugin.elgg-state-inactive {
+	background: #dedede;
+}
+
+.elgg-plugin .elgg-state-error {
+	background: #fbe3e4;
+	color: #8a1f11;
+	border-color: #fbc2c4;
+	font-weight: bold;
+}
+
+.elgg-plugin .elgg-state-warning {
+	background: #fbedb5;
+	color: #000000;
+	border-color: #fbe58b;
+	font-weight: bold;
+}
+
+.elgg-plugin-more {
+	background-color: #eee;
+	border-radius: 8px;
+	padding: 5px 10px;
+	margin: 4px 0;
+}
+
+ul.elgg-plugin-categories,
+ul.elgg-plugin-categories > li,
+ul.elgg-plugin-resources,
+ul.elgg-plugin-resources > li {
+	display: inline;
+}
+
+.elgg-plugin-category-bundled {
+	border-width: 2px;
+	border-color: #0054A7;
+}

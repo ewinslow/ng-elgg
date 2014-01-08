@@ -1,0 +1,15 @@
+<div class="elgg-layout">
+  <main class="elgg-layout-content" ui-view></main>
+  <nav class="elgg-layout-sidebar">
+    <ul class="elgg-menu elgg-menu-sidebar">
+      <li ng-repeat="post in ctrl.posts.items">
+        <a ui-sref="posts.single({post: post.id})">
+          {{post.name}}
+        </a>
+        <div class="elgg-text--muted">
+          {{post.summary}}
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,9 @@
+.elgg-list-distinct {
+	border-top: 1px dotted #CCCCCC;
+	margin: 5px 0;
+	clear: both;
+}
+
+.elgg-list-distinct > li {
+	border-bottom: 1px dotted #CCCCCC;
+}

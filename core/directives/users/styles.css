@@ -1,0 +1,63 @@
+.elgg-users[aria-orientation=horizontal] > * {
+	float: left;
+}
+
+.elgg-users .elgg-users-controls {
+	margin: .5em 0;
+}
+
+.elgg-users .elgg-users-controls li + li {
+	margin-left: 0.5em;
+}
+
+.elgg-users tr.elgg-state-selected td {
+	background: pink;
+}
+
+.elgg-users tr: hover td {
+	background: lightgrey;
+}
+
+.elgg-users tr.elgg-state-focused td: first-child {
+	background: red;
+}
+
+.elgg-users .elgg-table-fixed > thead {
+	display: block;
+	padding-right: 16px;
+}
+
+.elgg-users .elgg-table-fixed > thead > tr {
+	display: table;
+	width: 100%;
+}
+
+.elgg-users .elgg-table-fixed > tbody {
+	display: block;
+	overflow-y: scroll;
+	height: 400px;
+}
+
+.elgg-users .elgg-col-checkbox {
+	width: 1%;
+}
+
+.elgg-users .elgg-col-location {
+	max-width: 15%;
+	width: 15%;
+}
+
+.elgg-users .elgg-col-timestamp {
+	max-width: 12%;
+	width: 12%;
+}
+
+.elgg-users .elgg-col-status {
+	max-width: 8%;
+	width: 8%;
+}
+
+.elgg-users .elgg-button {
+	line-height: normal;
+	padding: 2px 4px;
+}

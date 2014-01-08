@@ -1,0 +1,27 @@
+<div class="elgg-image-block elgg-river-item">
+    <div class="elgg-image">
+        <elgg-avatar entity="activity.actor" size="small"></elgg-avatar>
+    </div>
+    <div class="elgg-body pas">
+        <!-- Main content -->
+        <div class="elgg-river-summary">
+            <span ng-bind-html="activity.title"></span>
+            <time datetime="{{activity.published}}" class="elgg-river-timestamp" title="{{activity.published | calendar}}">
+                {{activity.published | fromNow}}
+            </time>
+        </div>
+        <div class="elgg-river-message" ng-bind-html="activity.object.content"></div>
+
+        <img ng-src="{{ctrl.getMediaAttachment().fullImage.url}}" width="100%" ng-show="!!ctrl.getMediaAttachment()" />
+
+        <ul class="tidypics-river-list" ng-show="!!ctrl.getMediaAttachments().length">
+            <li class="tidypics-photo-item" ng-repeat="media in ctrl.getMediaAttachments()">
+                <a href="{{media.url}}">
+                    <img ng-src="{{media.image.url}}" width="88" height="88" class="elgg-photo" alt="{{media.displayName}}" title="{{media.displayName}}">
+                </a>
+            </li>
+        </ul>
+
+        <div elgg-responses object="activity.object"></div>
+    </div>
+</div>

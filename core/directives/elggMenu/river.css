@@ -1,0 +1,31 @@
+/* ***************************************
+    RIVER
+*************************************** */
+
+.elgg-menu-river {
+	float: right;
+	margin-left: 15px;
+	font-size: 90%;
+	color: #aaa;
+	line-height: 16px;
+	height: 16px;
+}
+
+.elgg-menu-river > li {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.elgg-menu-river > li > a {
+	color: #aaa;
+	height: 16px;
+}
+/* need to override .elgg-menu-hz */
+
+.elgg-menu-river > li > a {
+	display: block;
+}
+
+.elgg-menu-river > li > span {
+	vertical-align: baseline;
+}

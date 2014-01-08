@@ -1,0 +1,22 @@
+.elgg-admin-notices {
+	padding-bottom: 15px;
+}
+
+.elgg-admin-notices p {
+	background-color: #BDE5F8;
+	color: black;
+	border: 1px solid blue;
+	font-weight: bold;
+	padding: 3px 0px 3px 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+	border-radius: 4px;
+}
+
+.elgg-admin-notices a.elgg-admin-notice {
+	float: right;
+	text-decoration: none;
+}
+
+.elgg-admin-notices a {
+	text-decoration: underline;
+}

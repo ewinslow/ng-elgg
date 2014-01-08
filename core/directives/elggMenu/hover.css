@@ -1,0 +1,47 @@
+/* ***************************************
+    HOVER MENU
+*************************************** */
+
+.elgg-menu-hover {
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	overflow: hidden;
+	min-width: 165px;
+	max-width: 250px;
+	border: solid 1px;
+	border-color: #E5E5E5 #999 #999 #E5E5E5;
+	background-color: #FFF;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.50);
+}
+
+.elgg-menu-hover > li {
+	border-bottom: 1px solid #ddd;
+}
+
+.elgg-menu-hover > li: last-child {
+	border-bottom: none;
+}
+
+.elgg-menu-hover .elgg-heading-basic {
+	display: block;
+}
+
+.elgg-menu-hover a {
+	padding: 2px 8px;
+	font-size: 92%;
+}
+
+.elgg-menu-hover a: hover, .elgg-menu-hover a: focus {
+	background: #ccc;
+	text-decoration: none;
+}
+
+.elgg-menu-hover-admin a {
+	color: red;
+}
+
+.elgg-menu-hover-admin a: hover, .elgg-menu-hover-admin a: focus {
+	color: white;
+	background-color: red;
+}

@@ -1,0 +1,31 @@
+.elgg-layout {
+	min-height: 360px;
+}
+
+.elgg-sidebar {
+	position: relative;
+	padding: 20px 10px;
+	float: right;
+	width: 210px;
+	margin: 0 0 0 10px;
+}
+
+.elgg-sidebar-alt {
+	position: relative;
+	padding: 20px 10px;
+	float: left;
+	width: 160px;
+	margin: 0 10px 0 0;
+}
+
+.elgg-main {
+	position: relative;
+	min-height: 360px;
+	padding: 10px;
+}
+
+.elgg-main > .elgg-head {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 10px;
+}

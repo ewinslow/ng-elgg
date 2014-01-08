@@ -1,0 +1,33 @@
+<div elgg-layout="one-column">
+	<div elgg-body class="elgg-main">
+		<div elgg-head>
+			<ul elgg-menu="title">
+				<li class="elgg-menu-item-add">
+					<a ui-sref="photos.add({container: ctrl.container.guid})" 
+					   elgg-button="action">
+						{{ ctrl.i18n.addPhotos() }}
+					</a>
+				</li>
+			</ul>
+			<h2 elgg-heading="main">{{ ctrl.i18n.allPhotos() }}</h2>
+		</div>
+		<div elgg-content>
+			<ul elgg-gallery="photos">
+				<li ng-repeat="photo in ctrl.photos.items" 
+				    id="elgg-object-{{photo.guid}}" class="elgg-item">
+					<a elgg-module="photo"
+					   ui-sref="photos.image({ image: photo.guid })">
+						<div elgg-body>
+							<img ng-src="{{photo.image.url}}"
+							     class="elgg-photo" alt=""
+							     width="200" height="200">
+						</div>
+						<div elgg-head>
+							<h3>{{photo.displayName}}</h3>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,67 @@
+<div class="elgg-responses">
+    <!-- Activity bar -->
+    <div>
+        <!-- Action buttons -->
+        <ul class="elgg-menu elgg-menu-hz elgg-menu-river elgg-menu-river-default float">
+            <li class="elgg-item" ng-show="!object.hasLiked">
+                <button class="elgg-link" ng-click="like()">
+                    Like
+                </button>
+            </li>
+            <li class="elgg-item" ng-show="object.hasLiked">
+                <button class="elgg-link" ng-click="unlike()">
+                    Unlike
+                </button>
+            </li>
+            <li class="elgg-item">
+                <button class="elgg-link" ng-click="startCommenting()">
+                    Comment
+                </button>
+            </li>
+        </ul>
+
+        <!-- Activity indicators -->
+        <ul class="elgg-menu elgg-menu-hz elgg-menu-river elgg-menu-river-alt float-alt" ng-show="object.likes.totalItems > 0">
+            <li class="elgg-item" ng-repeat="liker in getLikes(5)">
+                <elgg-avatar entity="liker" size="topbar"></elgg-avatar>
+            </li>
+            <li class="elgg-item">
+                <button class="elgg-link" title="See who likes this" ng-click="toggleLikesDrawer()">
+                    +{{object.likes.totalItems}}
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Activity drawers -->
+    <div>
+        <!-- Likes drawer -->
+        <div class="elgg-river-likes-drawer clearfloat" ng-show="likesDrawerIsOpen">
+            <div class="elgg-river-more">
+                <button class="elgg-link" ng-click="toggleLikesDrawer()">
+                    &laquo; Hide likes
+                </button>
+            </div>
+            <div style="background: #EEE; padding: 5px">
+                <ul class="elgg-list elgg-list-likes">
+                    <li class="elgg-item" ng-repeat="liker in object.likes.items">
+                        <div class="elgg-image-block">
+                            <a href="{{liker.url}}" class="elgg-image">
+                                <img ng-src="{{liker.image.url}}" width="25" height="25" />
+                            </a>
+                            <div class="elgg-body">
+                                <a href="{{liker.url}}">{{liker.displayName}}</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="elgg-ajax-loader centered" ng-show="loadingLikes"></div>
+            </div>
+        </div>
+
+        <!-- Comments drawer -->
+        <div ng-hide="likesDrawerIsOpen">
+            <elgg-river-comments object="object"></elgg-river-comments>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="elgg-river-comments-drawer clearfloat">
+    <div class="elgg-river-response elgg-river-more" ng-show="ctrl.remainingItems() > 0 && !ctrl.isLoadingOlderItems()">
+        <button class="elgg-link" ng-click="ctrl.loadOlderItems()">
+            +{{ctrl.remainingItems()}} more
+        </button>
+    </div>
+    <div class="elgg-ajax-loader centered" ng-show="ctrl.isLoadingOlderItems()"></div>
+    <div elgg-river-comments items="object.comments.items"></div>
+    <div class="elgg-river-response" ng-hide="commenting">
+        <button class="elgg-input-text" elgg-focus-model="leaveCommentButton.focused" ng-click="commenting = true; commentBox.focused = true">
+            Leave a comment...
+        </button>
+    </div>
+    <form class="elgg-image-block elgg-form elgg-form-comments-add" ng-show="commenting" ng-submit="ctrl.submit(newComment); newComment.content = ''; leaveCommentButton.focused = true; commenting = false">
+
+        <div class="elgg-image">
+            <elgg-avatar entity="user" size="small"></elgg-avatar>
+        </div>
+        <div class="elgg-body">
+            <textarea ng-model="newComment.content" required elgg-focus-model="commentBox.focused">
+            </textarea>
+            <button class="elgg-button elgg-button-submit">
+                Comment
+            </button>
+            <button class="elgg-button elgg-button-cancel" ng-click="newComment.content = ''; leaveCommentButton.focused = true; commenting = false">
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>

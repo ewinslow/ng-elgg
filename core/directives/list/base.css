@@ -1,0 +1,17 @@
+.elgg-list {
+	border-top: 1px dotted #CCCCCC;
+	clear: both;
+	margin: 5px 0;
+}
+
+.elgg-list > li {
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+.elgg-item .elgg-subtext {
+	margin-bottom: 5px;
+}
+
+.elgg-item .elgg-content {
+	margin: 10px 5px;
+}

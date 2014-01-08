@@ -1,0 +1,76 @@
+<div class="elgg-users" id="{{id}}">
+    <div class="elgg-users-controls clearfix">
+        <ul style="float:left" class="elgg-menu elgg-menu-hz" aria-orientation="horizontal">
+            <li>
+                <a href="/admin/users/add" class="elgg-button elgg-button-action">
+					+ New user
+				</a>
+            </li>
+            <li data-ng-show="getSelectedUnbannedUsers().length > 0">
+                <button class="elgg-button elgg-button-action" data-ng-click="banSelectedUsers()">
+                    Ban
+                </button>
+            </li>
+            <li data-ng-show="getSelectedBannedUsers().length > 0">
+                <button class="elgg-button elgg-button-action" data-ng-click="unbanSelectedUsers()">
+                    Unban
+                </button>
+            </li>
+        </ul>
+        <ul style="float:right" aria-orientation="horizontal" class="elgg-menu elgg-menu-hz">
+            <li>
+                <span data-ng-bind="getTotalItems()">??</span> results
+            </li>
+        </ul>
+    </div>
+    <table class="elgg-table elgg-table-fixed">
+        <thead>
+            <th class="elgg-col-checkbox">
+                <input type="checkbox" data-ng-checked="allSelected()" data-ng-click="setAllSelections(!allSelected())" title="Toggle All" />
+            </th>
+            <th class="elgg-col-name">Name</th>
+            <th class="elgg-col-email">Email</th>
+            <th class="elgg-col-timestamp">Registered</th>
+            <th class="elgg-col-timestamp">Activity</th>
+            <th class="elgg-col-status">Status</th>
+        </thead>
+        <tbody data-when-scrolled="handleScroll($event)" tabindex="0" role="listbox" aria-activedescendant="{{id}}-option-{{getCurrentUser().guid}}" data-ng-keydown="handleKeyDown($event)" data-elgg-focus-model="listbox.focused">
+            <tr data-ng-repeat="user in getItems() | filter:q" role="option" data-ng-class="getOptionClasses(user)" class="elgg-users-option" id="{{id}}-option-{{user.guid}}" data-ng-click="handleAction(user)" aria-labelledby="{{id}}-option-{{user.guid}}-label">
+                <td class="elgg-col-checkbox">
+                    <input type="checkbox" tabindex="-1" data-ng-checked="isSelected(user)" />
+                </td>
+                <td class="elgg-col-name">
+                    <div class="elgg-image-block">
+                        <a href="{{user.url}}" tabindex="-1" class="elgg-image elgg-avatar">
+                            <img data-ng-src="{{user.image.url}}" width=25 height=25 alt="" />
+                        </a>
+                        <div class="elgg-body">
+                            <h3 id="{{id}}-option-{{user.guid}}-label">
+								<a href="{{user.url}}" tabindex="-1">{{user.displayName}}</a>
+								<small>({{user.username}})</small>
+							</h3>
+                        </div>
+                    </div>
+                </td>
+                <td class="elgg-col-email">{{user.email}}</td>
+                <td class="elgg-col-timestamp">
+                    <time datetime="{{user.published}}" data-elgg-friendly-time />
+                </td>
+                <td class="elgg-col-timestamp">
+                    <time datetime="{{user.last_action}}" data-elgg-friendly-time data-ng-show="user.last_action" />
+                    <span data-ng-show="!user.last_action">Never</span>
+                </td>
+                <td class="elgg-col-status">
+                    <span data-ng-show="user.banned" title="{{user.ban_reason}}">Banned</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="center">
+        <button class="link" data-ng-click="loadNextItems()" data-ng-show="hasNextItems() && !isLoadingNextItems()">
+            See more...
+        </button>
+        <div class="elgg-ajax-loader centered" data-ng-show="isLoadingNextItems()">
+        </div>
+    </div>
+</div>

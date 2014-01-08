@@ -1,0 +1,10 @@
+<div class="elgg-menu-wrapper elgg-menu-wrapper-{{name}}">
+    <ul ng-repeat="section in ctrl.getSections(name)"
+        class="elgg-menu elgg-menu-{{name}} elgg-menu-{{name}}-{{section.name}}">
+        
+        <li ng-repeat="menuItem in section.getMenuItems()"
+            elgg-menu-item="menuItem">
+        </li>
+        
+    </ul>
+</div>

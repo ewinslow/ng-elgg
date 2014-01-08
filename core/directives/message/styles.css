@@ -1,0 +1,26 @@
+/* ***************************************
+        Messages
+*************************************** */
+
+.elgg-message {
+	color: white;
+	font-weight: bold;
+	display: block;
+	padding: 3px 10px;
+	cursor: pointer;
+	opacity: 0.9;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+	border-radius: 8px;
+}
+
+.elgg-state-success {
+	background-color: black;
+}
+
+.elgg-state-error {
+	background-color: red;
+}
+
+.elgg-state-notice {
+	background-color: #4690D6;
+}

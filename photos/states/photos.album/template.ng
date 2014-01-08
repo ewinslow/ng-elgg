@@ -1,0 +1,47 @@
+<div elgg-layout="one-column">
+	<div class="elgg-main elgg-body">
+		<div class="elgg-head">
+			<ul elgg-menu="title" class="elgg-menu-hz elgg-menu-title-default">
+				<li class="elgg-menu-item-upload" ng-show="ctrl.album.canEdit">
+					<a ui-sref="photos.album.upload({album: ctrl.album.guid})"
+					   elgg-button="submit">
+						{{ 'images:upload' | translate }}
+					</a>
+				</li>
+				<li class="elgg-menu-item-edit" ng-show="ctrl.album.canEdit">
+					<a ui-sref="photos.album.edit({album: ctrl.album.guid})"
+					   class="elgg-button elgg-button-action">
+						{{ 'edit' | translate }}
+					</a>
+				</li>
+				<li class="elgg-menu-item-delete" ng-show="ctrl.album.canEdit">
+					<a ng-click="ctrl.deleteEntity(ctrl.album)">
+						<span class="elgg-icon elgg-icon-delete">Delete</span>
+					</a>
+				</li>
+			</ul>
+			<h2 class="elgg-heading-main">
+				{{album.displayName}}
+			</h2>
+		</div>
+		<div class="elgg-content">
+			<div class="elgg-output" ng-bind-html="album.content"></div>
+			<ul elgg-gallery="photos"
+			    ng-show="ctrl.album.totalItems > 0">
+			    
+				<li ng-repeat="image in ctrl.album.items"
+				    id="elgg-object-{{image.guid}}" class="elgg-item">
+				    
+					<a href="{{image.url}}">
+						<img ng-src="{{image.image.url}}" class="elgg-photo"
+						     title="{{image.displayName}}" alt="{{image.displayName}}" />
+					</a>
+				</li>
+			</ul>
+			<div ng-show="ctrl.album.totalItems == 0">
+			    There are no photos in this album... yet!
+		    </div>
+			<!-- <div elgg-responses object="album"></div> -->	
+		</div>
+	</div>
+</div>

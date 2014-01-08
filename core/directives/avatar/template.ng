@@ -1,0 +1,5 @@
+<div class="elgg-avatar">
+	<a href="{{entity.url}}">
+		<img ng-src="{{entity.image.url}}" alt="{{entity.displayName}}">
+	</a>
+</div>

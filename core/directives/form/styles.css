@@ -1,0 +1,64 @@
+.elgg-form-login,
+.elgg-form-account {
+	max-width: 450px;
+}
+
+fieldset > div {
+	margin-bottom: 15px;
+}
+
+fieldset > div: last-child {
+	margin-bottom: 0;
+}
+
+.elgg-form-alt > fieldset > .elgg-foot {
+	border-top: 1px solid #CCC;
+	padding: 10px 0;
+}
+
+label {
+	font-weight: bold;
+	color: #333;
+	font-size: 110%;
+}
+
+input,
+textarea {
+	border: 1px solid #ccc;
+	color: #666;
+	font: 120% Arial, Helvetica, sans-serif;
+	padding: 5px;
+	width: 100%;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+input[type=email]: focus, input[type=password]: focus, input[type=text]: focus, input[type=url]: focus, textarea: focus {
+	border: solid 1px #4690d6;
+	background: #e4ecf5;
+	color: #333;
+    /* We remove outlines from specific input types so we can leave the browser
+	   defaults (like glows) for everything else */
+	outline: 0 none;
+}
+
+.elgg-longtext-control {
+	float: right;
+	margin-left: 14px;
+	font-size: 80%;
+	cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 0 3px 0 0;
+	padding: 0;
+	border: none;
+	width: auto;
+}
+
+.elgg-input-checkboxes.elgg-horizontal li,
+.elgg-input-radios.elgg-horizontal li {
+	display: inline;
+	padding-right: 10px;
+}

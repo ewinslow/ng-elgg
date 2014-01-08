@@ -1,0 +1,28 @@
+{
+	"directives": [
+		"elggButton",
+		"elggGallery",
+		"elggIcon",
+		"elggLayout",
+		"elggMenu",
+		"elggPage"
+	],
+	"factories": [
+	],
+	"filters": [
+	],
+	"states": {
+		"default": {
+			"abstract": true,
+			"controller": true,
+			"template": true,
+			"url": ""
+		},
+		"index": {
+			"controller": true,
+			"parent": "default",
+			"template": true,
+			"url": "/"
+		}
+	}
+}

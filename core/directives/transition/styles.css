@@ -1,0 +1,3 @@
+.elgg-transition: hover, .elgg-transition: focus, : focus > .elgg-transition {
+	opacity: .7;
+}

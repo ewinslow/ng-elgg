@@ -1,0 +1,18 @@
+.elgg-module {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+@import url(aside.css);
+
+@import url(dropdown.css);
+
+@import url(featured.css);
+
+@import url(info.css);
+
+@import url(main.css);
+
+@import url(popup.css);
+
+@import url(widget.css);

@@ -1,0 +1,17 @@
+.elgg-image-block {
+	padding: 3px 0;
+}
+
+.elgg-image-block .elgg-image {
+	float: left;
+	margin-right: 5px;
+}
+
+.elgg-image-block .elgg-image-alt {
+	float: right;
+	margin-left: 5px;
+}
+
+.elgg-avatar > a: focus > img, .elgg-image > a: focus > img {
+	opacity: .7;
+}
