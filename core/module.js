@@ -9,31 +9,29 @@ define(function(require) {
         angular.module('pascalprecht.translate'),
         angular.module('snap'),
     ], {
-    	"directives": [
-    		"elggButton",
-    		"elggGallery",
-    		"elggIcon",
-    		"elggLayout",
-    		"elggMenu",
-    		"elggPage"
-    	],
-    	"factories": [
-    	],
-    	"filters": [
-    	],
-    	"states": {
-    		"default": {
-    			"abstract": true,
-    			"controller": true,
-    			"template": true,
-    			"url": ""
-    		},
-    		"index": {
-    			"controller": true,
-    			"parent": "default",
-    			"template": true,
-    			"url": "/"
-    		}
-    	}
+        "directives": [
+            "elggButton",
+            "elggGallery",
+            "elggIcon",
+            "elggLayout",
+            "elggMenu",
+            "elggPage"
+        ],
+        "factories": [],
+        "filters": [],
+        "states": {
+            "default": {
+                "abstract": true,
+                "controller": true,
+                "template": true,
+                "url": ""
+            },
+            "index": {
+                "controller": true,
+                "parent": "default",
+                "template": true,
+                "url": "/"
+            }
+        }
     });
 });
