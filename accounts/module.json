@@ -1,9 +1,0 @@
-{
-	"states": {
-		"login2": {
-			"controller": true,
-			"template": true,
-			"url": "/login2"
-		}
-	}
-}

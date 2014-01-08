@@ -1,6 +1,5 @@
 define(function(require) {
     var createModule = require('ngRequire/createModule');
-    var moduleConfig = require('json!elgg/core/module.json');
     var angular = require('angular');
 
     require('angular-snap');
@@ -9,5 +8,32 @@ define(function(require) {
     return createModule('elgg/core', [
         angular.module('pascalprecht.translate'),
         angular.module('snap'),
-    ], moduleConfig);
+    ], {
+    	"directives": [
+    		"elggButton",
+    		"elggGallery",
+    		"elggIcon",
+    		"elggLayout",
+    		"elggMenu",
+    		"elggPage"
+    	],
+    	"factories": [
+    	],
+    	"filters": [
+    	],
+    	"states": {
+    		"default": {
+    			"abstract": true,
+    			"controller": true,
+    			"template": true,
+    			"url": ""
+    		},
+    		"index": {
+    			"controller": true,
+    			"parent": "default",
+    			"template": true,
+    			"url": "/"
+    		}
+    	}
+    });
 });

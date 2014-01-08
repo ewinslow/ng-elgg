@@ -1,7 +1,26 @@
 define(function(require) {
     var createModule = require('ngRequire/createModule');
-    var moduleConfig = require('json!elgg/posts/module.json');
     var elggCore = require('elgg/core/module');
 
-    return createModule('elgg/posts', [elggCore], moduleConfig);
+    return createModule('elgg/posts', [elggCore], {
+    	"states": {
+    		"posts": {
+    			"controller": true,
+    			"parent": "default",
+    			"resolve": [
+    				"posts"
+    			],
+    			"template": true,
+    			"url": "/posts"
+    		},
+    		"posts.single": {
+    			"controller": true,
+    			"resolve": [
+    				"post"
+    			],
+    			"template": true,
+    			"url": "/:post"
+    		}
+    	}
+    });
 });
