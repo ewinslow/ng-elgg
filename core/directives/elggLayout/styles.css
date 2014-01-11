@@ -25,7 +25,8 @@
 }
 
 .elgg-main > .elgg-head {
-	padding-bottom: 3px;
+	background: white url('bg_topnav.jpg') repeat-x;
 	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 3px;
 	margin-bottom: 10px;
 }

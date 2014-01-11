@@ -31,6 +31,12 @@ define(function(require) {
                 "parent": "default",
                 "template": true,
                 "url": "/"
+            },
+            "login": {
+                "controller": true,
+                "parent": "default",
+                "template": true,
+                "url": "/login"
             }
         }
     });

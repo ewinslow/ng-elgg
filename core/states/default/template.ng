@@ -4,7 +4,7 @@
             <div class="elgg-inner">
                 <button snap-toggle="left"
                         elgg-icon="menu"
-                        aria-label="Menu">
+                        aria-label="Main menu">
                     &#9776;
                 </button>
                 <span>App Title</span>

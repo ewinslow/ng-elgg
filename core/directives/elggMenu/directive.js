@@ -1,4 +1,6 @@
 define(function(require) {
+    require('css!./default.css');
+    
     return {
         restrict: 'A',
         // template: require('text!./template.ng'),

@@ -17,6 +17,10 @@
 
 /* the width is on the page rather than topbar to handle small viewports */
 
+body {
+	background: #123040 url(bg_container.jpg);
+}
+
 .elgg-page-default {
 	background: #123040 url(bg_container.jpg);
 	min-height: 100%;

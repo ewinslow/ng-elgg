@@ -1,0 +1,33 @@
+<div elgg-layout="one-column">
+	<div class="elgg-body elgg-main">
+		<div class="elgg-head">
+        	<h2 class="elgg-heading-main">Log in</h2>
+        </div>
+		<div class="elgg-content">
+			<form class="elgg-form elgg-form-account elgg-form-login">
+            	<label>
+            	    <span>Username or email</span>
+                	<input type="text" value="" name="username" class="elgg-input-text elgg-autofocus" autofocus="autofocus"></div>
+                </label>
+                <label>
+                	<span>Password</span>
+                    <input type="password" value="" name="password" class="elgg-input-password">
+                </label>
+
+
+                <div class="elgg-foot">
+                	<label class="mtm float-alt">
+                		<input type="checkbox" name="persistent" value="true" checked="">
+                		<span>Remember me</span>
+                	</label>
+                	
+                	<input type="submit" value="Log in" elgg-button="submit">
+                	
+                	<div class="mtm">
+                    	<a href="https://cbcoverseas.org/forgotpassword" class="forgot_link" rel="nofollow">Lost password</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+</div>

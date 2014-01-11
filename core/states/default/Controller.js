@@ -18,6 +18,9 @@ define(function() {
         }, {
             href: $state.href('events'),
             label: 'Events'
+        }, {
+            href: $state.href('login'),
+            label: "Log in"
         }];
     };
 
