@@ -1,5 +1,5 @@
 .elgg-heading-site,
-.elgg-heading-site: hover, .elgg-heading-site: focus {
+.elgg-heading-site:hover, .elgg-heading-site:focus {
 	font-size: 2em;
 	line-height: 1.4em;
 	color: white;
@@ -9,14 +9,17 @@
 	text-decoration: none;
 }
 
-.elgg-heading-site: focus {
+.elgg-heading-site:focus {
 	text-decoration: underline;
 }
 
 .elgg-heading-main {
-	float: left;
-	max-width: 530px;
-	margin-right: 10px;
+    float: left;
+    margin: 0 10px 0 0;
+    color: #0a2b33;
+    font-family: 'Crimson Text', serif;
+    font-size: 23px;
+    text-transform: uppercase;
 }
 
 .elgg-heading-basic {

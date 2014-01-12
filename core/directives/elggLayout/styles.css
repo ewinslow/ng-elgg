@@ -21,12 +21,10 @@
 .elgg-main {
 	position: relative;
 	min-height: 360px;
-	padding: 10px;
 }
 
 .elgg-main > .elgg-head {
 	background: white url('bg_topnav.jpg') repeat-x;
-	border-bottom: 1px solid #CCCCCC;
-	padding-bottom: 3px;
-	margin-bottom: 10px;
+    height: 27px;
+    padding: 1em 1em .7em;
 }

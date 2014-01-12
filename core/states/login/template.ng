@@ -1,7 +1,7 @@
 <div elgg-layout="one-column">
 	<div class="elgg-body elgg-main">
 		<div class="elgg-head">
-        	<h2 class="elgg-heading-main">Log in</h2>
+        	<h2 elgg-heading="main">Log in</h2>
         </div>
 		<div class="elgg-content">
 			<form class="elgg-form elgg-form-account elgg-form-login">
