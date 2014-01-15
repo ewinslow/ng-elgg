@@ -1,22 +1,18 @@
 define(function(require) {
-    var newClass = require('evan/newClass');
+    /**
+     * @ngInject
+     */
+    function Controller($scope, blog, elgg) {
+        $scope.blog = blog;
 
-    var Controller = newClass({
-        /**
-         * @ngInject
-         */
-        constructor: function($scope, blog, elgg) {
-            $scope.blog = blog;
-
-            $scope.deleteEntity = function(guid) {
-                elgg.action('blog/delete', {
-                    guid: guid
-                }).then(function() {
-                    window.history.back();
-                });
-            };
-        }
-    });
+        $scope.deleteEntity = function(guid) {
+            elgg.action('blog/delete', {
+                guid: guid
+            }).then(function() {
+                window.history.back();
+            });
+        };
+    }
 
     Controller.$resolve = {
         blog: function(evanDatabase, $route) {

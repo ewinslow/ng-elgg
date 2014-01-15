@@ -1,16 +1,17 @@
 define(function(require) {
-    var newClass = require('evan/newClass');
 
-    return newClass({
-        /**
-         * @ngInject
-         */
-        constructor: function(album, $window, $location) {
-            this.album = album;
-            this.$window = $window;
-            this.$location = $location;
-        },
+    /**
+     * @ngInject
+     */
+    function Controller(album, $window, $location) {
+        this.album = album;
+        this.$window = $window;
+        this.$location = $location;
+    }
 
+    Controller.prototype = {
+        constructor: Controller,
+        
         deleteEntity: function(album) {
             if (this.$window.confirm('Are you sure?')) {
                 this.elgg.action('photos/delete', {
@@ -22,5 +23,7 @@ define(function(require) {
         onDeleteSuccess_: function(result) {
             this.$location.url(result.forward_url.slice(this.elgg.config.wwwroot.length));
         }
-    });
+    };
+    
+    return Controller;
 });

@@ -1,14 +1,15 @@
 define(function(require) {
-    var newClass = require('evan/newClass');
+    /**
+     * @ngInject
+     */
+    function Controller($scope) {
+        $scope.ctrl = this;
 
-    return newClass({
-
-        constructor: function($scope) {
-            $scope.ctrl = this;
-
-            this.activity = $scope.activity;
-        },
-
+        this.activity = $scope.activity;
+    }
+    
+    Controller.prototype = {
+        constructor: Controller,
         getMediaAttachment: function() {
             var index = -1;
 
@@ -30,5 +31,7 @@ define(function(require) {
                 return !!item.image;
             });
         },
-    });
+    };
+    
+    return Controller;
 });
