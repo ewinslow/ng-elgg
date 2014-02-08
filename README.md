@@ -1,7 +1,7 @@
 ng-elgg
 =======
 
-An AngularJS-based implementation of Elgg's UI
+An AngularJS-based implementation of [Elgg](http://elgg.org)'s UI
 
 Looking forward to Elgg 2.0
 ------
