@@ -1,6 +1,8 @@
 ng-elgg
 =======
 
+[![Build Status](https://travis-ci.org/ewinslow/ng-elgg.png?branch=master)](https://travis-ci.org/ewinslow/ng-elgg)
+
 An AngularJS-based implementation of [Elgg](http://elgg.org)'s UI with an offline-first and mobile-first philosophy.
 
 Demo
