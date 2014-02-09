@@ -18,7 +18,14 @@ npm install -g volo grunt-cli
 git clone https://github.com/ewinslow/ng-elgg
 cd ng-elgg
 npm install
+volo update
+grunt
 ```
+
+Note also https://github.com/ewinslow/ng-elgg/issues/1
+
+This will set you up with a local version of the UI.
+
 
 Looking forward to Elgg 2.0
 ------
