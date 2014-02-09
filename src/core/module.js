@@ -14,6 +14,7 @@ define(function(require) {
             "elggGallery",
             "elggHeading",
             "elggIcon",
+            "elggInputWrapper",
             "elggLayout",
             "elggMenu",
             "elggPage"
