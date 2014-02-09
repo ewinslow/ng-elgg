@@ -4,11 +4,17 @@ define(function(require) {
 
     return createModule('elgg/accounts', [elggCore], {
         "states": {
+            "login": {
+                "controller": true,
+                "parent": "default",
+                "template": true,
+                "url": "/login"
+            },
             "login2": {
                 "controller": true,
                 "template": true,
                 "url": "/login2"
-            }
+            },
         }
     });
 });

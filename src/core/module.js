@@ -33,12 +33,6 @@ define(function(require) {
                 "template": true,
                 "url": "/"
             },
-            "login": {
-                "controller": true,
-                "parent": "default",
-                "template": true,
-                "url": "/login"
-            }
         }
     });
 });
