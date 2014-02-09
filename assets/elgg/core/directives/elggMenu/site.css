@@ -1,0 +1,31 @@
+.elgg-menu-site {
+	z-index: 1;
+}
+
+.elgg-menu-site .elgg-count {
+	float: right;
+	background: gray;
+	padding: 0 .25em;
+	border-radius: .3em;
+}
+
+.elgg-menu-site > li > a {
+	padding: .25em 1em;
+	height: 1.5em;
+	line-height: 1.5em;
+}
+
+.elgg-menu-site > li > a {
+	text-decoration: none;
+}
+
+.elgg-menu-site > li > a {
+	color: white;
+}
+
+.elgg-menu-site > .elgg-state-selected > a,
+.elgg-menu-site > li > a:hover,
+.elgg-menu-site > li > a:focus {
+	background: white;
+	color: #0B303D;
+}

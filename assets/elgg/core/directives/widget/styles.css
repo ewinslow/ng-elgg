@@ -1,0 +1,33 @@
+a.elgg-widget-collapse-button {
+	color: #c5c5c5;
+}
+
+a.elgg-widget-collapse-button: hover, a.elgg-widget-collapsed: hover {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+a.elgg-widget-collapse-button: before {
+	content: "\25BC";
+}
+
+a.elgg-widget-collapsed: before {
+	content: "\25BA";
+}
+
+.elgg-widget-edit {
+	display: none;
+	width: 96%;
+	padding: 2%;
+	border-bottom: 2px solid #dedede;
+	background-color: #f9f9f9;
+}
+
+.elgg-widget-content {
+	padding: 10px;
+}
+
+.elgg-widget-placeholder {
+	border: 2px dashed #dedede;
+	margin-bottom: 15px;
+}

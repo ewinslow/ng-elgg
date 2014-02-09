@@ -1,0 +1,10 @@
+.elgg-icon-menu {
+	background: none;
+	border: none;
+	color: inherit;
+	font-weight: bold;
+	font-size: 1.2em;
+	width: 40px;
+	height: 40px;
+	position: relative;
+}

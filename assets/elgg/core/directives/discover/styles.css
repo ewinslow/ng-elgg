@@ -1,0 +1,7 @@
+.elgg-discover .elgg-discoverable {
+	display: none;
+}
+
+.elgg-discover: hover .elgg-discoverable {
+	display: block;
+}

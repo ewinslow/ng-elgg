@@ -1,0 +1,31 @@
+.elgg-input-wrapper {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+* + .elgg-input-wrapper {
+    margin-top: 1em;
+}
+
+.elgg-input-wrapper .elgg-label {
+    font-weight: bold;
+    margin: 0;
+    border: 0;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.elgg-form {
+    margin: 0 auto;
+    max-width: 15em;
+    padding: 1em;
+}

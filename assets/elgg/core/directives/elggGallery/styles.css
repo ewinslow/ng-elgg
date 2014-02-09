@@ -1,0 +1,40 @@
+/* ***************************************
+        Gallery
+*************************************** */
+
+.elgg-gallery {
+	border: none;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.elgg-gallery: before, .elgg-gallery: after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.elgg-gallery td {
+	padding: 5px;
+}
+
+.elgg-gallery-fluid > li {
+	float: left;
+}
+
+.elgg-gallery-users > li {
+	margin: 0 2px;
+}
+
+.elgg-gallery-photos {
+	padding: 0;
+	margin: 0;
+}
+
+.elgg-gallery-photos > li {
+	box-sizing: border-box;
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}

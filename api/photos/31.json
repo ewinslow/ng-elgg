@@ -1,0 +1,8 @@
+{
+	"guid": 31,
+	"displayName": "Photo of AngularJS",
+	"summary": "A better web browser",
+	"image": {
+	    "url": "https://lorempixel.com/200/200/"
+	}
+}

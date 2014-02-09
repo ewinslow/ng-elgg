@@ -1,0 +1,13 @@
+<div class="elgg-layout elgg-layout-one-column clearfix">
+	<div class="elgg-main elgg-body">
+		<div class="elgg-head">
+			<h2 class="elgg-heading-main">
+				<span ng-show="blog.guid">{{blog.displayName}}</span>
+				<span ng-hide="blog.guid">{{'blog:add' | elggEcho}}</span>
+			</h2>
+		</div>
+		<div class="elgg-content">
+			<elgg-form-blog-save blog="blog"></elgg-form-blog-save>
+		</div>
+	</div>
+</div>

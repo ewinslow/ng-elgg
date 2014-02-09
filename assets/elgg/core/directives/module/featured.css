@@ -1,0 +1,17 @@
+.elgg-module-featured {
+	border: 1px solid #4690D6;
+	border-radius: 6px;
+}
+
+.elgg-module-featured > .elgg-head {
+	padding: 5px;
+	background-color: #4690D6;
+}
+
+.elgg-module-featured > .elgg-head * {
+	color: white;
+}
+
+.elgg-module-featured > .elgg-body {
+	padding: 10px;
+}

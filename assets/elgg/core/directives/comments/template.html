@@ -1,0 +1,49 @@
+<div class="elgg-river-comments-drawer clearfloat">
+    <!--
+	require('css!./styles');
+	require('css!components/elggAjaxLoader/styles');
+	require('css!components/elggButton/styles');
+	require('css!components/elggIcon/styles');
+	require('css!components/elggImageBlock/styles');
+	-->
+    <div class="elgg-river-response elgg-river-more" ng-show="ctrl.hasRemainingItems() && !ctrl.isLoadingPreviousItems()">
+        <button class="elgg-link" ng-click="ctrl.loadPreviousItems()">
+            {{ "river:comments:more" | elggEcho:[ctrl.getRemainingItemsCount()] }}
+        </button>
+    </div>
+    <div class="elgg-ajax-loader centered" ng-show="ctrl.isLoadingPreviousItems()"></div>
+    <ul class="elgg-list elgg-river-comments">
+        <li class="elgg-river-response" ng-repeat="comment in ctrl.getItems() | orderBy:'published'">
+            <div class="elgg-image-block">
+                <elgg-avatar entity="comment.author" size="tiny" class="elgg-avatar-small elgg-image"></elgg-avatar>
+                <div class="elgg-body">
+                    <button class="elgg-icon elgg-icon-delete float-alt" title="{{ 'comment:delete' | elggEcho }}" ng-show="comment.canDelete && !isDeleting" ng-click="ctrl.remove(comment)">
+                        {{ 'delete' | elggEcho }}
+                    </button>
+                    <div class="elgg-ajax-loader float-alt" ng-show="isDeleting"></div>
+                    <div>
+                        <a href="{{comment.author.url}}">{{comment.author.displayName}}</a>
+                        <time elgg-friendly-time datetime="{{comment.published}}" class="elgg-subtext"></time>
+                    </div>
+                    <div ng-bind-html="comment.content"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <form class="elgg-image-block elgg-form elgg-form-comments-add elgg-river-response" ng-show="ctrl.user" ng-submit="ctrl.submit(); leaveCommentButton.focus();">
+
+        <elgg-avatar entity="ctrl.user" size="small" class="elgg-image"></elgg-avatar>
+        <div class="elgg-body">
+            <textarea required ng-model="ctrl.newComment" ng-focus="ctrl.isCommenting = true">
+            </textarea>
+            <div ng-show="ctrl.isCommenting">
+                <button class="elgg-button elgg-button-submit">
+                    {{ 'Comment' | elggEcho }}
+                </button>
+                <button class="elgg-button elgg-button-cancel" ng-click="ctrl.isCommenting = false; leaveCommentButton.focus()">
+                    {{ 'Cancel' | elggEcho }}
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

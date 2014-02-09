@@ -1,0 +1,43 @@
+.elgg-widgets {
+	min-height: 30px;
+}
+
+.elgg-widget-add-control {
+	text-align: right;
+	margin: 5px 5px 15px;
+}
+
+.elgg-widgets-add-panel {
+	padding: 10px;
+	margin: 0 5px 15px;
+	background: #dedede;
+	border: 2px solid #ccc;
+}
+/* @todo location-dependent style: make an extension of elgg-gallery */
+
+.elgg-widgets-add-panel li {
+	float: left;
+	margin: 2px 10px;
+	width: 200px;
+	padding: 4px;
+	background-color: #ccc;
+	border: 2px solid #b0b0b0;
+	font-weight: bold;
+}
+
+.elgg-widgets-add-panel li a {
+	display: block;
+}
+
+.elgg-widgets-add-panel .elgg-state-available {
+	color: #333;
+	cursor: pointer;
+}
+
+.elgg-widgets-add-panel .elgg-state-available: hover {
+	background-color: #bcbcbc;
+}
+
+.elgg-widgets-add-panel .elgg-state-unavailable {
+	color: #888;
+}

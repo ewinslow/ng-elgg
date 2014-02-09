@@ -1,0 +1,43 @@
+<div class="elgg-layout elgg-layout-one-column clearfix">
+	<div class="elgg-main elgg-body">
+		<div class="elgg-head">
+			<ul class="elgg-menu elgg-menu-title elgg-menu-hz elgg-menu-title-default">
+				<li class="elgg-menu-item-download">
+					<a href="{{ctrl.image.image.url}}" class="elgg-button elgg-button-action" download>
+						{{ 'Download' }}
+					</a>
+				</li>
+				<li class="elgg-menu-item-edit" ng-show="ctrl.image.canEdit">
+					<a href="/photos/edit/{{ctrl.image.guid}}" class="elgg-button elgg-button-action">
+                                                {{ 'Edit' }}
+                                        </a>
+                                </li>
+			</ul>
+			<h2 class="elgg-heading-main">{{ctrl.image.displayName}}</h2>
+		</div>
+		<div class="elgg-content">
+			<div class="tidypics-photo-wrapper center">
+				<ul class="elgg-menu elgg-menu-hz tidypics-album-nav">
+					<li ng-show="ctrl.image.prev">
+						<a href="{{ctrl.image.prev.url}}" rel="prev" title="{{ctrl.image.prev.displayName}}">
+							<span class="elgg-icon elgg-icon-arrow-left">{{ 'Previous' }}</span>
+						</a>
+					</li>
+					<li><span>{{ '1 of 3' }}</span></li>
+					<li ng-show="ctrl.image.next">
+						<a href="{{ctrl.image.next.url}}" rel="next" title="{{ctrl.image.next.displayName}}">
+							<span class="elgg-icon elgg-icon-arrow-right">{{ 'Next' }}</span>
+						</a>
+					</li>
+				</ul>
+
+				<a href="{{ctrl.image.next.url}}">
+					<img ng-src="{{ctrl.image.fullImage.url}}" class="elgg-photo tidypics-photo"
+					     title="{{ctrl.image.displayName}}" alt="{{ctrl.image.displayName}}" />
+				</a>
+
+			</div>
+			<div elgg-responses object="ctrl.image"></div>
+		</div>
+	</div>
+</div>

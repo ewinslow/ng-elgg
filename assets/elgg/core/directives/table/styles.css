@@ -1,0 +1,26 @@
+/* ***************************************
+        Tables
+*************************************** */
+
+.elgg-table {
+	width: 100%;
+	border-top: 1px solid #ccc;
+}
+
+.elgg-table td,
+.elgg-table th {
+	padding: 4px 8px;
+	border: 1px solid #ccc;
+}
+
+.elgg-table th {
+	background-color: #ddd;
+}
+
+.elgg-table tr: nth-child(odd), .elgg-table tr.odd {
+	background-color: #fff;
+}
+
+.elgg-table tr: nth-child(even), .elgg-table tr.even {
+	background-color: #f0f0f0;
+}

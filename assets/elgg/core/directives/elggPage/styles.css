@@ -1,0 +1,87 @@
+/**
+ * Page Layout
+ *
+ * Contains CSS for the page shell and page layout
+ *
+ * Default layout: 956px wide, centered. Used in default page shell
+ *
+ * @package Elgg.Core
+ * @subpackage UI
+ */
+
+/* ***************************************
+	PAGE LAYOUT
+*************************************** */
+
+/***** DEFAULT LAYOUT ******/
+
+/* the width is on the page rather than topbar to handle small viewports */
+
+body {
+	background: #123040 url(bg_container.jpg);
+}
+
+.elgg-page-default {
+	background: #123040 url(bg_container.jpg);
+	min-height: 100%;
+}
+
+.elgg-page-default .elgg-page-footer {
+	background: url(bg_footer.png);
+	box-shadow: 0 5px 10px #000;
+}
+
+.elgg-page-default .elgg-page-footer > .elgg-inner {
+	margin: 0 0 0 12em;
+	max-width: 956px;
+	padding: .5em 1em;
+}
+/***** TOPBAR ******/
+
+.elgg-page-topbar {
+	background: #333333 url(toptoolbar_background.gif) repeat-x top left;
+	border-bottom: 1px solid #000;
+	height: 24px;
+	position: relative;
+	z-index: 9000;
+}
+
+.elgg-page-topbar > .elgg-inner {
+	padding: 0 10px;
+}
+/***** PAGE HEADER ******/
+
+.elgg-page-header {
+	color: white;
+	position: relative;
+	z-index: 2;
+}
+
+.elgg-page-header > .elgg-inner {
+	position: relative;
+}
+
+.elgg-page-nav {
+	float: left;
+	margin-top: 84px;
+	min-width: 12em;
+}
+
+.elgg-page-body {
+	background: white;
+	min-height: 360px;
+	overflow: hidden;
+}
+/***** PAGE FOOTER ******/
+
+.elgg-page-footer {
+	position: relative;
+}
+
+.elgg-page-footer {
+	color: #999;
+}
+
+.elgg-page-footer a: hover {
+	color: #666;
+}

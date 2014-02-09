@@ -1,0 +1,40 @@
+/* ***************************************
+    AUTOCOMPLETE
+*************************************** */
+
+/** TODO: Will expand to full screen w/out max-width */
+
+.ui-autocomplete {
+	position: absolute;
+	cursor: default;
+}
+
+.elgg-autocomplete-item .elgg-body {
+	max-width: 600px;
+}
+
+.ui-autocomplete {
+	background-color: white;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.ui-autocomplete .ui-menu-item {
+	padding: 0px 4px;
+	border-radius: 5px;
+}
+
+.ui-autocomplete .ui-menu-item: hover {
+	background-color: #eee;
+}
+
+.ui-autocomplete a: hover {
+	text-decoration: none;
+	color: #4690D6;
+}
+
+.ui-autocomplete a.ui-state-hover {
+	background-color: #eee;
+	display: block;
+}

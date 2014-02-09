@@ -1,0 +1,17 @@
+.elgg-module-popup {
+	background-color: white;
+	border: 1px solid #ccc;
+	z-index: 9999;
+	margin-bottom: 0;
+	padding: 5px;
+	border-radius: 6px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.elgg-module-popup > .elgg-head {
+	margin-bottom: 5px;
+}
+
+.elgg-module-popup > .elgg-head * {
+	color: #0054A7;
+}

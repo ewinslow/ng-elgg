@@ -1,0 +1,18 @@
+<div>
+	<form style="max-width: 20em; margin: 2em auto;" ng-submit="ctrl.submit()">
+		<div>
+			<label for="email">Sign in with email:</label><br>
+			<input type="email" id="email" ng-model="ctrl.email" autofocus required ng-disabled="ctrl.waiting">
+		</div>
+		<button ng-show="ctrl.mode == 'email'" ng-disabled="ctrl.waiting">Continue</button>
+		<div ng-show="ctrl.mode == 'legacy'">
+			<div>
+				<label for="password">Password</label><br>
+				<input type="password" id="password" ng-model="ctrl.password">
+			</div>
+			<button ng-show="ctrl.mode == 'legacy'">Login</button>
+			<a href="/forgotpassword">Forgot Password?</a>
+			<a href="/register">Register</a>
+		</div>
+	</form>
+</div>

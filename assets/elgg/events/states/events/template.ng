@@ -1,0 +1,13 @@
+<div class="elgg-layout">
+  <main class="elgg-layout-content" ui-view></main>
+  <nav class="elgg-layout-sidebar">
+    <ul class="elgg-menu elgg-menu-sidebar">
+      <li ng-repeat="event in ctrl.events.items">
+        <a ui-sref="events.single({event: event.id})">
+          {{event.name}}
+        </a>
+        <div class="elgg-text--muted">{{event.summary}}</div>
+      </li>
+    </ul>
+  </nav>
+</div>

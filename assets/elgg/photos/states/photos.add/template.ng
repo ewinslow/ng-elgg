@@ -1,0 +1,34 @@
+<div class="elgg-layout elgg-layout-one-column clearfix">
+	<div class="elgg-main elgg-body">
+		<div class="elgg-head">
+			<h2 class="elgg-heading-main">
+				<span ng-show="album.guid">{{album.displayName}}</span>
+				<span ng-hide="album.guid">{{'album:create' | elggEcho}}</span>
+			</h2>
+		</div>
+		<div class="elgg-content">
+			<form name="$form" class="elgg-form" ng-submit="submit()">
+			<fieldset>
+				<div>
+					<label>{{'title' | elggEcho}}</label>
+					<input type="text" name="title" class="elgg-input-text" required ng-model="album.displayName" />
+				</div>
+				<div>
+					<label>{{'description' | elggEcho}}</label>
+					<textarea rows="10" cols="50" name="description" class="elgg-input-longtext" elgg-input-html ng-model="album.content"></textarea>
+				</div>
+				<div>
+					<label>{{'access' | elggEcho}}</label>
+					<select name="access_id" required class="elgg-input-dropdown elgg-input-access" ng-model="album.access_id">
+						<option value="1">{{'LOGGED_IN' | elggEcho}}</option>
+						<option value="0">{{'PRIVATE' | elggEcho}}</option>
+					</select>
+				</div>
+				<div class="elgg-foot">
+					<input type="submit" value="{{'save' | elggEcho}}" class="elgg-button elgg-button-submit">
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

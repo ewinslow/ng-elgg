@@ -1,0 +1,8 @@
+<div>
+  <select ng-model="ctrl.style">
+    <option value="special">Call to action</option>
+    <option value="action">Plain Jane</option>
+  </select>
+  
+  <button elgg-button="{{ctrl.style}}">Click me!</button>
+</div>

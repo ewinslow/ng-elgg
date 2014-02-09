@@ -1,0 +1,19 @@
+{
+	"items": [
+		{
+			"guid": 11,
+			"displayName": "AngularConf 2013",
+			"summary": "A better web browser",
+			"startTime": "",
+			"endTime": ""
+		},
+		{
+			"guid": 12,
+			"displayName": "EmberConf 2014",
+			"summary": "Cocoa for web",
+			"startTime": "",
+			"endTime": ""
+		}
+	],
+	"totalItems": 45
+}

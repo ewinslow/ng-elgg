@@ -1,0 +1,22 @@
+<ul class="elgg-list elgg-river-comments">
+    <li class="elgg-river-response" ng-repeat="comment in items | orderBy:'published'">
+        <div class="elgg-image-block" data-ng-mouseenter="ctrl.hovering = true" data-ng-mouseleave="ctrl.hovering = false">
+
+            <div class="elgg-image">
+                <elgg-avatar entity="comment.author" size="small"></elgg-avatar>
+            </div>
+            <div class="elgg-body">
+                <button class="elgg-icon elgg-icon-delete float-alt" title="Delete this comment" data-ng-show="ctrl.hovering && comment.canDelete && !ctrl.deleting" data-ng-click="ctrl.deleteComment(comment)">
+                </button>
+                <div class="elgg-ajax-loader float-alt" data-ng-show="ctrl.deleting"></div>
+                <div>
+                    <a href="{{comment.author.url}}">{{comment.author.displayName}}</a>
+                    <time datetime="{{comment.published}}" class="elgg-subtext" title="{{comment.published | calendar}}">
+                        {{comment.published | fromNow}}
+                    </time>
+                </div>
+                <div data-ng-bind-html="comment.content"></div>
+            </div>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,34 @@
+<div>
+    <snap-content class="elgg-page elgg-page-default">
+        <header class="elgg-page-header">
+            <div class="elgg-inner">
+                <button snap-toggle="left"
+                        elgg-icon="menu"
+                        aria-label="Main menu">
+                    &#9776;
+                </button>
+                <span>App Title</span>
+                <ul><li>Action 1</li></ul>
+            </div>
+        </header>
+        <div class="elgg-page-body">
+            <div class="elgg-inner" ui-view></div>
+        </div>
+    </snap-content>
+    <snap-drawers>
+        <nav snap-drawer="left">
+            <ul elgg-menu="site">
+                <li ng-repeat="menuItem in ctrl.menuItems" snap-toggle>
+                    <a href="{{menuItem.href}}">
+                        {{menuItem.label}}
+                    </a>
+                </li>
+                <li>
+                    <a role="button" href="#" ng-click="ctrl.reload()">
+                        Check for updates
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </snap-drawer>
+</div>
