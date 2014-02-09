@@ -1,0 +1,35 @@
+{
+	"items": [
+		{
+			"guid": 1,
+			"displayName": "AngularJS Pics",
+			"briefdescription": "A better web browser",
+			"image": {
+			    "url": "https://lorempixel.com/200/200/"
+			},
+			"items": [],
+			"totalItems": 20
+		},
+		{
+			"guid": 2,
+			"displayName": "EmberJS Pics",
+			"briefdescription": "Cocoa for web",
+			"image": {
+			    "url": "https://lorempixel.com/200/200/"
+			},
+			"items": [],
+			"totalItems": 16
+		},
+		{
+			"guid": 3,
+			"displayName": "BackboneJS Pics",
+			"briefdescription": "Some structure for your webapps",
+			"image": {
+			    "url": "https://lorempixel.com/200/200/"
+			},
+			"items": [],
+			"totalItems": 27
+		}
+	],
+	"totalItems": 45
+}

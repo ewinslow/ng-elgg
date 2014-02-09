@@ -1,0 +1,16 @@
+{
+	"items": [{
+    	"guid": 12345,
+    	"name": "Evan Winslow",
+    	"username": "evan"
+    }, {
+    	"guid": 12346,
+    	"name": "Brad Smith",
+    	"username": "brad"
+    }, { 
+    	"guid": 12347,
+    	"name": "Gus Ferreira",
+    	"username": "gus"
+    }],
+	"totalItems": 3
+}

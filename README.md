@@ -3,6 +3,14 @@ ng-elgg
 
 An AngularJS-based implementation of [Elgg](http://elgg.org)'s UI with an offline-first and mobile-first philosophy.
 
+Installation
+------
+
+npm install -g volo grunt-cli
+git clone ...
+cd ng-elgg
+npm install
+
 
 Looking forward to Elgg 2.0
 ------
@@ -34,8 +42,7 @@ the baggage of legacy with us.
 Let me expound on each bit of advice one at a time. Then I'll go over why I
 think embracing this advice lends itself to the values outlined above.
 
-Develop apps, not sites
-----------------
+### Develop apps, not sites
 I want Elgg 2.0 to completely split frontend and backend development. Anything
 that requires PHP logic (sending emails, DBAL, etc.) should be in a separate
 git repo from the UI code. Frontend logic (JS), templates (HTML), and theme
@@ -51,8 +58,7 @@ applications. These applications then request data from an API and render a UI
 to the user.
 
 
-Code for the future
--------------
+### Code for the future
 We should write code against the latest web standards and rely on tools and 
 polyfills to plug in the gaps for old-browser compatibility. A prime example
 of this is writing css prefixes manually. We should never do that again.
@@ -65,8 +71,7 @@ should be contributed to an existing project external project for whom these
 issues are in scope.
 
 
-Take advantage of modern tools
-------------
+### Take advantage of modern tools
 We need to stop reinventing wheels and pawn off development effort to more
 focused and well-funded communities.
 
@@ -79,8 +84,7 @@ productive and help keep us on the cutting edge:
  - composer -- The defacto PHP package manager
 
 
-Embrace dependencies
---------
+### Embrace dependencies
 As long as we choose dependencies wisely and can remain in control of our API,
 this can only result in a more modern framework that is easier to keep up to
 date (because there's less code for us to maintain!):
@@ -99,13 +103,12 @@ date (because there's less code for us to maintain!):
    - Foundation
    - etc...
 
-Performance
-------------
+### Performance
 The performance of a system is second in importance only to correctness. I'll
 focus mainly on frontend performance here because (IMHO) that's where most of
 the gains can be had for the least investment.
 
-### Startup latency
+#### Startup latency
 Client-rendered UI with aggressive caching (AppCache) must become the new normal
 in order for us to keep up with user expectations. I'm shooting for a 10x
 improvement in startup time. That means going from 3 seconds to 300ms. This
@@ -149,7 +152,7 @@ goes back to the "embracing dependencies" comment I made before).
 
  [1]: http://alistapart.com/article/application-cache-is-a-douchebag
 
-### Backend performance
+#### Backend performance
 Moving all rendering to the UI means we can ditch Elgg's views system. It has
 served us well for a long time but its time has come. Elgg views are often slow,
 hard to cache, insecure, and don't do a good job of separating concerns.
@@ -164,8 +167,7 @@ that. It's faster for them and cheaper for you. Everybody wins, what's not to
 love?
 
 
-Security
---------
+### Security
 Currently it is possible to do the right thing with Elgg concerning security.
 We need to move past that and make it really hard to do the wrong thing.
 
@@ -175,7 +177,7 @@ opposite direction: keep the static content on your vanity domain
 (www.example.org) and move the API server to a different domain
 (api.example.org). This has some nice security benefits.
 
-###  OAuth, OpenId, BrowserID (Authentication)
+####  OAuth, OpenId, BrowserID (Authentication)
 We can eliminate entire classes of authentication vulnerabilities by dropping
 our reliance on cookies and pawning off auth management to someone else.
 
@@ -207,7 +209,7 @@ exactly the right way to go. If there any more identity bridges that need
 building, we can just support the BrowserID project instead of
 defaulting to building/maintaining our own thing.
 
-### Content-Security-Policy and strict contextual escaping (XSS)
+#### Content-Security-Policy and strict contextual escaping (XSS)
 With a ground-up rewrite of the frontend code, we're free to set up a strict
 default CSP and only open up permissions as needed. That allows us to ban inline
 scripts effectively eliminating XSS vulnerabilities for all browsers that
@@ -218,8 +220,7 @@ hoping that any existing XSS vulnerability gets discovered and reported before
 it gets exploited.
 
 
-Community
--------
+### Community
 The Elgg community is enthusiastic, but rather small. The more stuff we try to
 implement on our own, the thinner we'll be spread and the less we'll be able
 to contribute to the things that actually make us unique. There are huge
@@ -237,22 +238,21 @@ system and plugin distribution system just for Elgg, or would we rather
 interoperate with the rest of the ecosystem and take advantage of all the great
 work that's going ithose efforts.
 
-Future
-------------
+### Future
 Furthermore, this split completely separates the frontend code from any
 knowledge of how the backend is implemented. The fact that PHP is being used is
 irrelevant and it could be easily replaced with Java, Ruby, Go, etc. This allows
 the frontend code to stand on its own merits instead of standing or falling with
 the PHP/MySQL choice.
 
-### Development/developer convenience
+#### Development/developer convenience
 This also provides some development conveniences in that we don't need to hack
 around existing tools to support the dual-environment setup that we have. For
 example, Travis, the continuous testing service, only really supports one
 execution environment at a time and we have had to come up with workarounds to
 get our tests to run correctly and efficiently in the dual PHP/JS environment.
 
-### Server becomes client agnostic and vice-versa
+#### Server becomes client agnostic and vice-versa
 Providing a server with a robust API means that we are not tied to
 whatever client implementation we provide. If someone decides to reimplement the
 client in Ember/Browserify instead of Angular/AMD, they are completely free to
