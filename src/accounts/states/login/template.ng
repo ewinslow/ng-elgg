@@ -20,7 +20,7 @@
                     <input type="password" name="password" class="elgg-input-password">
                 </label>
             	<div>
-                	<a href="forgotpassword" class="forgot_link" rel="nofollow">Lost password</a>
+                	<a ui-sref="forgotpassword">Lost password</a>
                 </div>
                 <div class="elgg-input-wrapper">
                 	<button type="submit" elgg-button="submit">Log in</button>

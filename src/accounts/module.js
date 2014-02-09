@@ -4,6 +4,12 @@ define(function(require) {
 
     return createModule('elgg/accounts', [elggCore], {
         "states": {
+            "forgotpassword": {
+                "controller": true,
+                "parent": "default",
+                "template": true,
+                "url": "/forgotpassword"
+            },
             "login": {
                 "controller": true,
                 "parent": "default",
