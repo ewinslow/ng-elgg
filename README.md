@@ -12,11 +12,12 @@ http://ewinslow.github.io/ng-elgg/
 Installation
 ------
 
+```sh
 npm install -g volo grunt-cli
 git clone ...
 cd ng-elgg
 npm install
-
+```
 
 Looking forward to Elgg 2.0
 ------
