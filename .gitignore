@@ -1,0 +1,6 @@
+vendors
+dist
+node_modules
+profiles.local.json
+
+!.gitignore
