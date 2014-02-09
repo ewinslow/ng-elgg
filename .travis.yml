@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.11'
+script: grunt travis
+after_success: bin/deploy.sh gh-pages
+branches:
+  only:
+  - master
+env:
+  global:
+    secure: G2vFnci4E4eZUk4R/EBJHxNCods4mGSVKbFW6hfJgQnXM7js1fS4OCTCwOVtYa7fXnTuYPgFucbEyaYv5G51g2boGFVeb6gpz8ung9e1moPbKc3qYZ/8KLE5V7hFnJjpe4xQF59BnCUXdVXGbeiIsOTUL/niljFpYiGnNMWBSSM=
