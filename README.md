@@ -3,6 +3,12 @@ ng-elgg
 
 An AngularJS-based implementation of [Elgg](http://elgg.org)'s UI with an offline-first and mobile-first philosophy.
 
+Demo
+----
+
+http://ewinslow.github.io/ng-elgg/
+
+
 Installation
 ------
 
