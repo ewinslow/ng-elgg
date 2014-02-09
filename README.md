@@ -10,13 +10,12 @@ Demo
 
 http://ewinslow.github.io/ng-elgg/
 
-
 Installation
 ------
 
 ```sh
 npm install -g volo grunt-cli
-git clone ...
+git clone https://github.com/ewinslow/ng-elgg
 cd ng-elgg
 npm install
 ```
