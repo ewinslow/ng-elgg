@@ -1,0 +1,42 @@
+{
+  "name": "ng-elgg",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ewinslow/ng-elgg.git"
+  },
+  "devDependencies": {
+    "elgg-grunt": "~0.2.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "amd": {},
+  "profiles": {
+    "gh-pages": {
+      "baseUrl": "http://ewinslow.github.io/ng-elgg/"
+    }
+  },
+  "volo": {
+    "namespace": "elgg",
+    "baseDir": "vendors/assets",
+    "dependencies": {
+      "angular.js": "github:angular/bower-angular/v1.2.3#angular.js",
+      "angular-csp.css": "github:angular/bower-angular/v1.2.3#angular-csp.css",
+      "jquery": "github:jquery/jquery/2.0.3",
+      "json.js": "github:millermedeiros/requirejs-plugins/v1.0.2#src/json.js",
+      "require": "github:jrburke/requirejs/2.1.9",
+      "text": "github:requirejs/text/2.0.10",
+      "angular-snap": "github:jtrussell/angular-snap.js-bower/v1.0.1#angular-snap.js",
+      "snap.js": "github:jakiestfu/snap.js/master#snap.min.js",
+      "snap.css": "github:jakiestfu/snap.js/master#snap.css",
+      "angular-ui-router": "github:angular-ui/ui-router/0.2.5#release/angular-ui-router.min.js",
+      "angular-translate": "github:PascalPrecht/bower-angular-translate/1.1.1#angular-translate.min.js",
+      "normalize.css": "github:necolas/normalize.css/v2.1.3#normalize.css",
+      "require-css/css": "github:guybedford/require-css/0.1.1#css.js",
+      "require-css/normalize": "github:guybedford/require-css/0.1.1#normalize.js",
+      "require-css/css-builder": "github:guybedford/require-css/0.1.1#css-builder.js",
+      "ngRequire": "github:ewinslow/ng-require/master#src"
+    }
+  }
+}
