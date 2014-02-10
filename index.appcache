@@ -16,6 +16,8 @@ assets/elgg/accounts/states/login/Controller.js
 assets/elgg/accounts/states/login/template.ng
 assets/elgg/accounts/states/login2/Controller.js
 assets/elgg/accounts/states/login2/template.ng
+assets/elgg/accounts/states/register/Controller.js
+assets/elgg/accounts/states/register/template.ng
 assets/elgg/activity/states/site/Controller.js
 assets/elgg/activity/states/site/template.html
 assets/elgg/blog/directives/elggBlogSaveForm/Controller.js
@@ -235,4 +237,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: dd2834a97faf8b68e649eb3b02ee77fd81ebb35f53719f8c0ec6ae220e471093
+# hash: 6138f943eb93b22bfd363b11529e2e019dc14c9fa1174ee2c8fd0c2080d904bd

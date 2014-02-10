@@ -1,0 +1,37 @@
+<div elgg-layout="one-column">
+	<div class="elgg-body elgg-main">
+		<div class="elgg-head">
+        	<h2 elgg-heading="main">Register</h2>
+        </div>
+		<div class="elgg-content">
+            <form class="elgg-form elgg-form-account elgg-form-register">
+                <label class="elgg-input-wrapper">
+                	<span class="elgg-label">Display name</span>
+                	<input type="text" autofocus>
+                </label>
+                <label class="elgg-input-wrapper">
+                	<span class="elgg-label">Email address</span>
+                	<input type="email">
+                </label>
+                <label class="elgg-input-wrapper">
+                	<span class="elgg-label">Username</span>
+                	<input type="text">
+                </label>
+                <label class="elgg-input-wrapper">
+                	<span class="elgg-label">Password</span>
+                    <input type="password">
+                </label>
+                <label class="elgg-input-wrapper">
+                	<span class="elgg-label">Password (again for verification)</span>
+                    <input type="password">
+                </label>
+                
+                <div class="elgg-input-wrapper">
+                    <button type="submit" class="elgg-button elgg-button-submit">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
