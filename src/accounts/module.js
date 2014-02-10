@@ -21,6 +21,12 @@ define(function(require) {
                 "template": true,
                 "url": "/login2"
             },
+            "register": {
+                "parent": "default",
+                "controller": true,
+                "template": true,
+                "url": "/register"
+            }
         }
     });
 });

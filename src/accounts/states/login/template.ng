@@ -21,6 +21,7 @@
                 </label>
             	<div>
                 	<a ui-sref="forgotpassword">Lost password</a>
+                	<a ui-sref="register">Register</a>
                 </div>
                 <div class="elgg-input-wrapper">
                 	<button type="submit" elgg-button="submit">Log in</button>
