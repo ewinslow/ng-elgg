@@ -32,15 +32,21 @@ Looking forward to Elgg 2.0
 
 Evan's advice on how we can make Elgg a 10x better development and end-user
 experience than Elgg 1.x and any of our existing competitors else currently out
-there:
+there. 
+
+The experience for developers and end-users will be so compelling that
+we wonder how we ever lived with the current state of affairs.
+
+TL;DR:
 
  * Develop apps, not sites
  * Code for the future
  * Take advantage of modern tools
  * Embrace dependencies
 
-These are radical changes I'm proposing, but I don't think they are
-fundamentally unreasonable. They are guided by the following, very pragmatic,
+Backwards compatibility of the UI is an explicit non-goal.
+These are dramatic changes I'm proposing, but I don't think they are
+unreasonable. They are guided by the following, very pragmatic,
 values:
 
  * Performance
