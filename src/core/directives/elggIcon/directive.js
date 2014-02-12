@@ -1,6 +1,5 @@
 define(function(require) {
     require('css!./styles.css')
-    require('css!./menu.css')
 
     return {
         restrict: 'A',

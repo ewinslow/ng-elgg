@@ -3,7 +3,7 @@
  *
  * Contains CSS for the page shell and page layout
  *
- * Default layout: 956px wide, centered. Used in default page shell
+ * Default layout: 990px wide, centered. Used in default page shell
  *
  * @package Elgg.Core
  * @subpackage UI
@@ -12,76 +12,91 @@
 /* ***************************************
 	PAGE LAYOUT
 *************************************** */
-
 /***** DEFAULT LAYOUT ******/
-
 /* the width is on the page rather than topbar to handle small viewports */
-
-body {
-	background: #123040 url(bg_container.jpg);
+.elgg-page-default .elgg-page-header > .elgg-inner {
+	max-width: 990px;
+	margin: 0 auto;
 }
-
-.elgg-page-default {
-	background: #123040 url(bg_container.jpg);
-	min-height: 100%;
+.elgg-page-default .elgg-page-navbar > .elgg-inner {
+	max-width: 990px;
+	margin: 0 auto;
+	height: auto;
 }
-
-.elgg-page-default .elgg-page-footer {
-	background: url(bg_footer.png);
-	box-shadow: 0 5px 10px #000;
+.elgg-page-default .elgg-page-body > .elgg-inner {
+	max-width: 990px;
+	margin: 0 auto;
 }
-
 .elgg-page-default .elgg-page-footer > .elgg-inner {
-	margin: 0 0 0 12em;
-	max-width: 956px;
-	padding: .5em 1em;
+	max-width: 990px;
+	margin: 0 auto;
+	padding: 5px 0;
+	border-top: 1px solid #DEDEDE;
 }
-/***** TOPBAR ******/
 
+/***** TOPBAR ******/
 .elgg-page-topbar {
-	background: #333333 url(toptoolbar_background.gif) repeat-x top left;
-	border-bottom: 1px solid #000;
-	height: 24px;
+	background: #424242;
+	border-top: 1px solid #424242;
+	border-bottom: 1px solid #000000;
+	padding: 0 20px;
 	position: relative;
+	height: 32px;
 	z-index: 9000;
 }
 
-.elgg-page-topbar > .elgg-inner {
-	padding: 0 10px;
+/***** PAGE MESSAGES ******/
+.elgg-system-messages {
+	position: fixed;
+	top: 32px;
+	right: 20px;
+	max-width: 500px;
+	z-index: 2000;
 }
+.elgg-system-messages li {
+	margin-top: 10px;
+}
+.elgg-system-messages li p {
+	margin: 0;
+}
+
 /***** PAGE HEADER ******/
-
 .elgg-page-header {
-	color: white;
+	background: #60B8F7;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
-
 .elgg-page-header > .elgg-inner {
 	position: relative;
 }
 
-.elgg-page-nav {
-	float: left;
-	margin-top: 84px;
-	min-width: 12em;
+.elgg-page-header-logo {
+    line-height: 2.5em;
+    margin-top: -.5em;
+    vertical-align: middle;
 }
 
-.elgg-page-body {
-	background: white;
-	min-height: 360px;
-	overflow: hidden;
+/***** PAGE NAVBAR ******/
+.elgg-page-navbar {
+	background: #4787B8;
 }
-/***** PAGE FOOTER ******/
-
-.elgg-page-footer {
+.elgg-page-navbar > .elgg-inner {
 	position: relative;
 }
 
-.elgg-page-footer {
-	color: #999;
+/***** PAGE BODY LAYOUT ******/
+.elgg-page-body {
+    position: relative;
+    min-height: 1000px;
 }
 
-.elgg-page-footer a: hover {
+/***** PAGE FOOTER ******/
+.elgg-page-footer {
+	color: #999;
+	padding: 0 10px;
+	position: relative;
+}
+
+.elgg-page-footer a:hover {
 	color: #666;
 }

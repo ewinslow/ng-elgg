@@ -8,19 +8,24 @@ define(function() {
 
         this.menuItems = [{
             href: $state.href('index'),
-            label: 'Home'
+            label: 'Home',
+            icon: 'home',
         }, {
             href: $state.href('photos'),
             label: 'Photos',
+            icon: 'photo',
         }, {
             href: $state.href('posts'),
-            label: 'Posts'
+            label: 'Posts',
+            icon: 'none'
         }, {
             href: $state.href('events'),
-            label: 'Events'
+            label: 'Events',
+            icon: 'none',
         }, {
             href: $state.href('login'),
-            label: "Log in"
+            label: "Log in",
+            icon: 'none'
         }];
     };
 

@@ -10,18 +10,18 @@
 }
 
 .elgg-menu-site > li > a {
-	padding: .25em 1em;
-	height: 1.5em;
-	line-height: 1.5em;
-}
-
-.elgg-menu-site > li > a {
-	text-decoration: none;
-}
-
-.elgg-menu-site > li > a {
 	color: white;
+	padding: 0 .75em;
+	height: 2.5em;
+	line-height: 2.5em;
+	text-decoration: none;
+	vertical-align: middle;
 }
+
+.elgg-menu-site > li > a > .elgg-icon {
+    margin-right: .75em;
+}
+
 
 .elgg-menu-site > .elgg-state-selected > a,
 .elgg-menu-site > li > a:hover,
