@@ -7,7 +7,8 @@ define(function(require) {
         'delete',
         'dropdown',
         'submit',
-        'special'
+        'special',
+        'clear'
     ];
 
     return {

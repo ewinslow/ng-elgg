@@ -1,5 +1,7 @@
 .elgg-menu-title {
-	float: right;
+	display: inline-block;
+	right: 0;
+	position: absolute;
 }
 
 .elgg-menu-title > li {
