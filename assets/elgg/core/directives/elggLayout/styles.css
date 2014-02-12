@@ -2,29 +2,46 @@
 	min-height: 360px;
 }
 
+.elgg-layout-widgets > .elgg-widgets {
+	float: right;
+}
+
 .elgg-sidebar {
 	position: relative;
-	padding: 20px 10px;
+	padding: 32px 0 20px 30px;
 	float: right;
-	width: 210px;
-	margin: 0 0 0 10px;
+	width: 21.212121%;
+	margin: 0;
+	border-left: 1px solid #EBEBEB;
 }
 
 .elgg-sidebar-alt {
 	position: relative;
-	padding: 20px 10px;
+	padding: 32px 30px 20px 0;
 	float: left;
-	width: 160px;
-	margin: 0 10px 0 0;
+	width: 16.161616%;
+	margin: 0 30px 0 0;
+	border-right: 1px solid #EBEBEB;
 }
 
 .elgg-main {
 	position: relative;
 	min-height: 360px;
+	padding: 12px 0 10px 0;
 }
 
 .elgg-main > .elgg-head {
-	background: white url('bg_topnav.jpg') repeat-x;
-    height: 27px;
-    padding: 1em 1em .7em;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #EBEBEB;
+	margin-bottom: 10px;
+}
+
+.elgg-layout-one-sidebar .elgg-main {
+	float: left;
+	width: 72.525252%;
+}
+
+.elgg-layout-two-sidebar .elgg-main {
+	float: left;
+	width: 50.101010%;
 }

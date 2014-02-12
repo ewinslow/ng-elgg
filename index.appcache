@@ -47,8 +47,6 @@ assets/elgg/core/directives/comments/styles.css
 assets/elgg/core/directives/comments/template.html
 assets/elgg/core/directives/discover/styles.css
 assets/elgg/core/directives/divide/styles.css
-assets/elgg/core/directives/elggButton/button_background.gif
-assets/elgg/core/directives/elggButton/button_graduation.png
 assets/elgg/core/directives/elggButton/directive.js
 assets/elgg/core/directives/elggButton/styles.css
 assets/elgg/core/directives/elggGallery/directive.js
@@ -57,18 +55,13 @@ assets/elgg/core/directives/elggHeading/directive.js
 assets/elgg/core/directives/elggHeading/styles.css
 assets/elgg/core/directives/elggIcon/directive.js
 assets/elgg/core/directives/elggIcon/elgg_sprites.png
-assets/elgg/core/directives/elggIcon/menu.css
+assets/elgg/core/directives/elggIcon/menu-overflow.svg
+assets/elgg/core/directives/elggIcon/menu.svg
 assets/elgg/core/directives/elggIcon/styles.css
 assets/elgg/core/directives/elggInputWrapper/directive.js
 assets/elgg/core/directives/elggInputWrapper/styles.css
-assets/elgg/core/directives/elggLayout/bg_topnav.jpg
 assets/elgg/core/directives/elggLayout/directive.js
-assets/elgg/core/directives/elggLayout/one-sidebar.css
-assets/elgg/core/directives/elggLayout/sidebar_background.gif
 assets/elgg/core/directives/elggLayout/styles.css
-assets/elgg/core/directives/elggLayout/two-sidebar.css
-assets/elgg/core/directives/elggLayout/two_sidebar_background.gif
-assets/elgg/core/directives/elggLayout/widgets.css
 assets/elgg/core/directives/elggMenu/Controller.js
 assets/elgg/core/directives/elggMenu/annotation.css
 assets/elgg/core/directives/elggMenu/default.css
@@ -89,14 +82,8 @@ assets/elgg/core/directives/elggMenu/title.css
 assets/elgg/core/directives/elggMenu/topbar.css
 assets/elgg/core/directives/elggMenu/user.css
 assets/elgg/core/directives/elggMenu/widget.css
-assets/elgg/core/directives/elggPage/bg_container.jpg
-assets/elgg/core/directives/elggPage/bg_footer.png
 assets/elgg/core/directives/elggPage/directive.js
-assets/elgg/core/directives/elggPage/favicon.ico
-assets/elgg/core/directives/elggPage/header_logo.gif
-assets/elgg/core/directives/elggPage/header_shadow.png
 assets/elgg/core/directives/elggPage/styles.css
-assets/elgg/core/directives/elggPage/toptoolbar_background.gif
 assets/elgg/core/directives/focusModel/factory.js
 assets/elgg/core/directives/form/styles.css
 assets/elgg/core/directives/friendlyTime/ngDirective.js
@@ -229,7 +216,7 @@ assets/require.js
 assets/snap.css
 assets/snap.js
 assets/text.js
-favicon.ico
+favicon.svg
 index.html
 
 NETWORK:
@@ -237,4 +224,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: f216236a1884813baa4e28a7b7115174dffe4226a81e1d83cf07271ee0ef032b
+# hash: abba1706f50971b916a31e8c90227a6073aa486891cf9a03b852149be0c3a7b2

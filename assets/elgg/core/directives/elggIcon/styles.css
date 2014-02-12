@@ -1,12 +1,25 @@
 .elgg-icon {
 	background: transparent url(elgg_sprites.png) no-repeat left;
+	display: inline-block;
 	width: 16px;
 	height: 16px;
-	margin: 0 2px;
+}
+
+.elgg-icon-menu,
+.elgg-icon-menu-overflow {
+	background: url(menu.svg) center center no-repeat;
+}
+
+.elgg-icon-menu-overflow {
+    background-image: url(menu-overflow.svg);
+}
+
+.elgg-icon-none {
+    background-position: 18px 18px;
 }
 
 .elgg-icon-arrow-left {
-	background-position: 0 -0px;
+	background-position: 0 0;
 }
 
 .elgg-icon-arrow-right {
@@ -17,7 +30,7 @@
 	background-position: 0 -36px;
 }
 
-.elgg-icon-attention: hover, : focus > .elgg-icon-attention {
+.elgg-icon-attention:hover, :focus > .elgg-icon-attention {
 	background-position: 0 -54px;
 }
 
