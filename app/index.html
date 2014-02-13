@@ -8,16 +8,13 @@
     <title>Elgg 2.0 Demo</title>
 
     <meta name="description" content="{{page.description}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
 
     <link rel="icon" sizes="any" type="image/svg" href="favicon.svg">
     <link rel="stylesheet" href="assets/main.css">
     <link ng-repeat="link in page.links" rel="{{link.rel}}" ng-href="{{link.href}}">
 
-    <script>
-        console.error("Content-Security-Policy is not working.");
-    </script>
     <script src="assets/require.js" defer></script>
     <script src="assets/main.js" defer></script>
 </head>
