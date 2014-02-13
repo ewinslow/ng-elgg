@@ -15,20 +15,16 @@
 /***** DEFAULT LAYOUT ******/
 /* the width is on the page rather than topbar to handle small viewports */
 .elgg-page-default .elgg-page-header > .elgg-inner {
-	max-width: 990px;
 	margin: 0 auto;
 }
 .elgg-page-default .elgg-page-navbar > .elgg-inner {
-	max-width: 990px;
 	margin: 0 auto;
 	height: auto;
 }
 .elgg-page-default .elgg-page-body > .elgg-inner {
-	max-width: 990px;
 	margin: 0 auto;
 }
 .elgg-page-default .elgg-page-footer > .elgg-inner {
-	max-width: 990px;
 	margin: 0 auto;
 	padding: 5px 0;
 	border-top: 1px solid #DEDEDE;
