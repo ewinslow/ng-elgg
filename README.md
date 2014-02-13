@@ -27,6 +27,14 @@ Note also https://github.com/ewinslow/ng-elgg/issues/1
 This will set you up with a local version of the UI.
 
 
+Requirements
+-----
+
+Modern browsers auto-update, so we only officially support the latest versions, including on mobile. Feel free to report old-browser bugs if they can be easily fixed with a shim or build task.
+
+Any old-browser support should be largely transparent to this project and the developers utilizing this project. We want to avoid any kind of feature detection or UA detection in the project code itself.
+
+
 Looking forward to Elgg 2.0
 ------
 
