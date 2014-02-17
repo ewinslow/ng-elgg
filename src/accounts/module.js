@@ -4,29 +4,9 @@ define(function(require) {
 
     return createModule('elgg/accounts', [elggCore], {
         "states": {
-            "forgotpassword": {
-                "controller": true,
-                "parent": "default",
-                "template": true,
-                "url": "/forgotpassword"
-            },
-            "login": {
-                "controller": true,
-                "parent": "default",
-                "template": true,
-                "url": "/login"
-            },
-            "login2": {
-                "controller": true,
-                "template": true,
-                "url": "/login2"
-            },
-            "register": {
-                "parent": "default",
-                "controller": true,
-                "template": true,
-                "url": "/register"
-            }
+            "forgotpassword": require('./states/forgotpassword/main'),
+            "login": require('./states/login/main'),
+            "register": require('./states/register/main')
         }
     });
 });

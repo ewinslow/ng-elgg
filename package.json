@@ -6,7 +6,7 @@
     "url": "http://github.com/ewinslow/ng-elgg.git"
   },
   "devDependencies": {
-    "elgg-grunt": "~0.2.0"
+    "elgg-grunt": "~0.3.0"
   },
   "engines": {
     "node": ">=0.8.0"
@@ -14,6 +14,7 @@
   "amd": {},
   "profiles": {
     "gh-pages": {
+      "name": "Elgg 2.0 Demo",
       "baseUrl": "http://ewinslow.github.io/ng-elgg/"
     }
   },

@@ -1,11 +1,12 @@
 <!doctype html>
 <!--(if target !foo)><!-->
 <html ng-csp manifest="{{baseUrl}}index.appcache">
-
+<!--<!(endif)-->
 <head>
+    <!--(if target !foo)><!-->
     <base href="{{baseUrl}}">
+    <title>{{name}}</title>
     <!--<!(endif)-->
-    <title>Elgg 2.0 Demo</title>
 
     <meta name="description" content="{{page.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +20,16 @@
     <script src="assets/main.js" defer></script>
 </head>
 
-<body ui-view></body>
+<body ui-view>
+    <div class="elggSplashScreen">
+        <div class="elggSplashScreen-content">
+            <img src="favicon.svg" width="100" height="100" alt="">
+            <!--(if target !foo)><!-->
+            <h1>{{name}}</h1>
+            <!--<!(endif)-->
+            <span>Loading...</span>
+        </div>
+    </div>
+</body>
 
 </html>

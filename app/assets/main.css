@@ -8,3 +8,22 @@
 	background: white;
 	box-shadow: 0 0 10px 3px black;
 }
+
+body, html {
+    height: 100%;
+    overflow: auto !important;
+}
+
+.elggSplashScreen {
+    background: #60B8F7;
+    color: white;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.elggSplashScreen-content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
