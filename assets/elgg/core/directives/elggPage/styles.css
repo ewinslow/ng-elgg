@@ -3,63 +3,27 @@
  *
  * Contains CSS for the page shell and page layout
  *
- * Default layout: 990px wide, centered. Used in default page shell
- *
  * @package Elgg.Core
  * @subpackage UI
  */
 
-/* ***************************************
-	PAGE LAYOUT
-*************************************** */
-/***** DEFAULT LAYOUT ******/
-/* the width is on the page rather than topbar to handle small viewports */
-.elgg-page-default .elgg-page-header > .elgg-inner {
-	margin: 0 auto;
-}
-.elgg-page-default .elgg-page-navbar > .elgg-inner {
-	margin: 0 auto;
-	height: auto;
-}
-.elgg-page-default .elgg-page-body > .elgg-inner {
-	margin: 0 auto;
-}
-.elgg-page-default .elgg-page-footer > .elgg-inner {
-	margin: 0 auto;
-	padding: 5px 0;
-	border-top: 1px solid #DEDEDE;
+.elgg-page {
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: 2.5em;
 }
 
-/***** TOPBAR ******/
-.elgg-page-topbar {
-	background: #424242;
-	border-top: 1px solid #424242;
-	border-bottom: 1px solid #000000;
-	padding: 0 20px;
-	position: relative;
-	height: 32px;
-	z-index: 9000;
-}
-
-/***** PAGE MESSAGES ******/
-.elgg-system-messages {
-	position: fixed;
-	top: 32px;
-	right: 20px;
-	max-width: 500px;
-	z-index: 2000;
-}
-.elgg-system-messages li {
-	margin-top: 10px;
-}
-.elgg-system-messages li p {
-	margin: 0;
-}
 
 /***** PAGE HEADER ******/
 .elgg-page-header {
 	background: #60B8F7;
-	position: relative;
+	color: white;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 	z-index: 3;
 }
 .elgg-page-header > .elgg-inner {
@@ -78,12 +42,18 @@
 }
 .elgg-page-navbar > .elgg-inner {
 	position: relative;
+	margin: 0 auto;
+	height: auto;
 }
 
 /***** PAGE BODY LAYOUT ******/
 .elgg-page-body {
+    height: 100%;
     position: relative;
-    min-height: 1000px;
+}
+
+.elgg-page-body > .elgg-inner {
+	margin: 0 auto;
 }
 
 /***** PAGE FOOTER ******/
@@ -93,6 +63,28 @@
 	position: relative;
 }
 
+.elgg-page-footer > .elgg-inner {
+	margin: 0 auto;
+	padding: 5px 0;
+	border-top: 1px solid #DEDEDE;
+}
+
 .elgg-page-footer a:hover {
 	color: #666;
 }
+
+/***** PAGE MESSAGES ******/
+.elgg-system-messages {
+	position: fixed;
+	top: 32px;
+	right: 20px;
+	max-width: 500px;
+	z-index: 2000;
+}
+.elgg-system-messages li {
+	margin-top: 10px;
+}
+.elgg-system-messages li p {
+	margin: 0;
+}
+

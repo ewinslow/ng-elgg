@@ -3,9 +3,10 @@
 <html ng-csp manifest="http://ewinslow.github.io/ng-elgg/index.appcache">
 
 <head>
-    <base href="http://ewinslow.github.io/ng-elgg/">
     
-    <title>Elgg 2.0 Demo</title>
+    <base href="http://ewinslow.github.io/ng-elgg/">
+    <title>{{name}}</title>
+    
 
     <meta name="description" content="{{page.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +20,16 @@
     <script src="assets/main.js" defer></script>
 </head>
 
-<body ui-view></body>
+<body ui-view>
+    <div class="elggSplashScreen">
+        <div class="elggSplashScreen-content">
+            <img src="favicon.svg" width="100" height="100" alt="">
+            
+            <h1>{{name}}</h1>
+            
+            <span>Loading...</span>
+        </div>
+    </div>
+</body>
 
 </html>

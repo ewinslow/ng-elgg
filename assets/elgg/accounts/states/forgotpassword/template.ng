@@ -5,12 +5,12 @@
         </div>
 		<div class="elgg-content">
 			<form class="elgg-form">
-            	<label class="elgg-input-wrapper">
-            	    <span class="elgg-label">Email</span>
+            	<label class="elgg-form-field">
+            	    <span class="elgg-form-field-label">Email</span>
             	    <span>We'll send you a link to reset your password</span>
                 	<input type="email" name="email" autocorrect="false" class="elgg-input-text" autofocus>
                 </label>
-                <div class="elgg-input-wrapper">
+                <div class="elgg-form-field">
                 	<button type="submit" elgg-button="submit">Get new password</button>
                 </div>
             </form>
