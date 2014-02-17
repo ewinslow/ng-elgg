@@ -18,6 +18,7 @@
 /***** PAGE HEADER ******/
 .elgg-page-header {
 	background: #60B8F7;
+	color: white;
 	margin: 0 auto;
 	position: fixed;
 	top: 0;
