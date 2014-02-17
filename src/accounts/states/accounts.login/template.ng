@@ -20,8 +20,8 @@
                     <input type="password" name="password" class="elgg-input-password">
                 </label>
             	<div>
-                	<a ui-sref="forgotpassword">Lost password</a>
-                	<a ui-sref="register">Register</a>
+                	<a ui-sref="accounts.forgotpassword">Lost password</a>
+                	<a ui-sref="accounts.register">Register</a>
                 </div>
                 <div class="elgg-input-wrapper">
                 	<button type="submit" elgg-button="submit">Log in</button>

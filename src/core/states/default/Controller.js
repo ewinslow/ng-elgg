@@ -23,7 +23,7 @@ define(function() {
             label: 'Events',
             icon: 'none',
         }, {
-            href: $state.href('login'),
+            href: $state.href('accounts.login'),
             label: "Log in",
             icon: 'none'
         }];
