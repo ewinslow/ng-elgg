@@ -5,8 +5,8 @@
         </div>
 		<div class="elgg-content">
 			<form class="elgg-form elgg-form-account elgg-form-login">
-            	<label class="elgg-input-wrapper">
-            	    <span class="elgg-label">Email</span>
+            	<label class="elgg-form-field">
+            	    <span class="elgg-form-field-label">Email</span>
                 	<input type="email" name="username" autocorrect="false" class="elgg-input-text" autofocus>
                 </label>
                 <div>
@@ -15,15 +15,15 @@
                 		<span>Remember me</span>
                 	</label>
                 </div>
-                <label class="elgg-input-wrapper">
-                	<span class="elgg-label">Password</span>
+                <label class="elgg-form-field">
+                	<span class="elgg-form-field-label">Password</span>
                     <input type="password" name="password" class="elgg-input-password">
                 </label>
             	<div>
-                	<a ui-sref="accounts.forgotpassword">Lost password</a>
-                	<a ui-sref="accounts.register">Register</a>
+                	<a ui-sref="forgotpassword">Lost password</a>
+                	<a ui-sref="register">Register</a>
                 </div>
-                <div class="elgg-input-wrapper">
+                <div class="elgg-form-field">
                 	<button type="submit" elgg-button="submit">Log in</button>
                 </div>
             </form>

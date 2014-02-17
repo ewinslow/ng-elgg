@@ -2,5 +2,5 @@ define({
     "controller": true,
     "parent": "default",
     "template": true,
-    "url": "/login"
+    "url": "/accounts/forgotpassword"
 });

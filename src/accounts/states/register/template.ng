@@ -5,28 +5,28 @@
         </div>
 		<div class="elgg-content">
             <form class="elgg-form elgg-form-account elgg-form-register">
-                <label class="elgg-input-wrapper">
-                	<span class="elgg-label">Display name</span>
+                <label class="elgg-form-field">
+                	<span class="elgg-form-field-label">Display name</span>
                 	<input type="text" autofocus>
                 </label>
-                <label class="elgg-input-wrapper">
-                	<span class="elgg-label">Email address</span>
+                <label class="elgg-form-field">
+                	<span class="elgg-form-field-label">Email address</span>
                 	<input type="email">
                 </label>
-                <label class="elgg-input-wrapper">
-                	<span class="elgg-label">Username</span>
+                <label class="elgg-form-field">
+                	<span class="elgg-form-field-label">Username</span>
                 	<input type="text">
                 </label>
-                <label class="elgg-input-wrapper">
-                	<span class="elgg-label">Password</span>
+                <label class="elgg-form-field">
+                	<span class="elgg-form-field-label">Password</span>
                     <input type="password">
                 </label>
-                <label class="elgg-input-wrapper">
-                	<span class="elgg-label">Password (again for verification)</span>
+                <label class="elgg-form-field">
+                	<span class="elgg-form-field-label">Password (again for verification)</span>
                     <input type="password">
                 </label>
                 
-                <div class="elgg-input-wrapper">
+                <div class="elgg-form-field">
                     <button type="submit" class="elgg-button elgg-button-submit">
                         Register
                     </button>
