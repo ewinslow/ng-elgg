@@ -14,7 +14,7 @@ define(function(require) {
             "elggGallery",
             "elggHeading",
             "elggIcon",
-            "elggInputWrapper",
+            "elggFormField",
             "elggLayout",
             "elggMenu",
             "elggPage"
@@ -22,18 +22,8 @@ define(function(require) {
         "factories": [],
         "filters": [],
         "states": {
-            "default": {
-                "abstract": true,
-                "controller": true,
-                "template": true,
-                "url": ""
-            },
-            "index": {
-                "controller": true,
-                "parent": "default",
-                "template": true,
-                "url": "/"
-            },
+            "default": require('./states/default/main'),
+            "index": require('./states/index/main'),
         }
     });
 });

@@ -1,15 +1,15 @@
-.elgg-input-wrapper {
+.elgg-form-field {
     margin: 0;
     padding: 0;
     border: 0;
     display: block;
 }
 
-* + .elgg-input-wrapper {
+* + .elgg-form-field {
     margin-top: 1em;
 }
 
-.elgg-input-wrapper .elgg-label {
+.elgg-form-field-label {
     font-weight: bold;
     margin: 0;
     border: 0;
