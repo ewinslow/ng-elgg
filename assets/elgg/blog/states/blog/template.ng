@@ -1,1 +1,16 @@
-<ui-view></ui-view>
+<div elgg-layout="one-column">
+	<div elgg-body>
+		<ol>
+			<li ng-repeat="blog in ctrl.blogs.items" class="elgg-item">
+				<a ui-sref="blog.view({ alias: blog.alias })">
+					<h3>{{blog.displayName}}</h3>
+					<div>{{blog.summary}}</div>
+				</a>
+				<div>
+				    <a href="{{blog.owner.url}}">{{blog.owner.displayName}}</a>
+			        <time elgg-friendly-time="blog.time_created"></time>	    
+                </div>				    
+			</li>
+		</ol>
+	</div>
+</div>

@@ -8,6 +8,7 @@ define('main', function(require) {
     
     var demo = angular.module('demo', [
         require('elgg/accounts/module').name,
+        require('elgg/blog/module').name,
         require('elgg/core/module').name,
         require('elgg/events/module').name,
         require('elgg/photos/module').name,

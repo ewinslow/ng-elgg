@@ -2,5 +2,7 @@ define(function() {
     /**
      * @ngInject
      */
-    return function() {};
+    return function(blogs) {
+        this.blogs = blogs;
+    };
 });

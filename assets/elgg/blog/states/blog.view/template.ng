@@ -1,33 +1,18 @@
-<div class="elgg-layout elgg-layout-one-column clearfix">
+<main class="elgg-layout elgg-layout-one-column clearfix">
 	<article class="elgg-main elgg-body">
 		<header class="elgg-head">
-			<h2 class="elgg-heading-main">{{blog.displayName}}</h2>
+			<h2 class="elgg-blog-title">{{ctrl.blog.displayName}}</h2>
+			<div class="elgg-blog-summary">{{ctrl.blog.summary}}</div>
+			<div class="elgg-blog-byline">
+				By <a ui-sref="users.view({ alias: ctrl.blog.author.alias })">{{ctrl.blog.author.displayName}}</a>
+				<time elgg-friendly-time datetime="{{ctrl.blog.published}}"></time>
+			</div>
 		</header>
 		<div class="elgg-content">
-			<div class="elgg-image-block clearfix clearfloat">
-				<div class="elgg-image">
-					<elgg-avatar entity="blog.author" size="tiny"></elgg-avatar>
-				</div>
-				<div class="elgg-body">
-					<ul class="elgg-menu elgg-menu-entity elgg-menu-hz elgg-menu-entity-default">
-						<li class="elgg-menu-item-edit" ng-show="blog.canEdit">
-							<a href="/blog/edit/{{blog.guid}}" title="Edit this">Edit</a>
-						</li>
-						<li class="elgg-menu-item-delete" ng-show="blog.canDelete">
-							<button ng-click="deleteEntity(blog.guid)" class="elgg-icon elgg-icon-delete elgg-requires-confirmation" title="Delete this" rel="Are you sure you want to delete this item?">
-								Delete
-							</button>
-						</li>
-					</ul>
-					<div class="elgg-subtext">
-						By <a href="{{blog.author.url}}">{{blog.author.displayName}}</a>
-						<time elgg-friendly-time datetime="{{blog.published}}"></time>
-					</div>
-				</div>
-			</div>
-			<div class="elgg-output blog-post mvm" ng-bind-html="blog.content"></div>
-			<footer elgg-responses object="blog"></footer>
+			<div class="elgg-output" ng-bind-html="ctrl.blog.content"></div>
 		</div>
-
+		<footer class="elgg-foot">
+		    <elgg-responses object="ctrl.blog"></elgg-responses>
+		</footer>
 	</article>
-</div>
+</main>

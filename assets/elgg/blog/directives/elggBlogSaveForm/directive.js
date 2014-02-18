@@ -6,6 +6,7 @@ define(function(require) {
             blog: '=',
         },
         controller: require('./Controller'),
+        controllerAs: 'ctrl',
         template: require('text!./template.ng')
     };
 });

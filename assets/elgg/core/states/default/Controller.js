@@ -15,6 +15,10 @@ define(function() {
             label: 'Photos',
             icon: 'photo',
         }, {
+            href: $state.href('blog'),
+            label: 'Blog',
+            icon: 'none',
+        }, {
             href: $state.href('posts'),
             label: 'Posts',
             icon: 'none'

@@ -3,6 +3,7 @@ CACHE MANIFEST
 
 CACHE:
 assets/angular-csp.css
+assets/angular-sanitize.js
 assets/angular-snap.js
 assets/angular-translate.js
 assets/angular-ui-router.js
@@ -25,12 +26,19 @@ assets/elgg/blog/directives/elggBlogSaveForm/directive.js
 assets/elgg/blog/directives/elggBlogSaveForm/template.ng
 assets/elgg/blog/module.js
 assets/elgg/blog/states/blog.add/Controller.js
+assets/elgg/blog/states/blog.add/main.js
 assets/elgg/blog/states/blog.add/template.ng
 assets/elgg/blog/states/blog.edit/Controller.js
+assets/elgg/blog/states/blog.edit/main.js
 assets/elgg/blog/states/blog.edit/template.ng
 assets/elgg/blog/states/blog.view/Controller.js
+assets/elgg/blog/states/blog.view/main.js
+assets/elgg/blog/states/blog.view/resolve.js
+assets/elgg/blog/states/blog.view/styles.css
 assets/elgg/blog/states/blog.view/template.ng
 assets/elgg/blog/states/blog/Controller.js
+assets/elgg/blog/states/blog/main.js
+assets/elgg/blog/states/blog/resolve.js
 assets/elgg/blog/states/blog/template.ng
 assets/elgg/core/directives/adminNotices/styles.css
 assets/elgg/core/directives/ajaxLoader/ajax_loader.gif
@@ -226,4 +234,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: fa1a197b4249fec841eaa302f06a0435ca4f5c5e25442778925a7d3850d1df1e
+# hash: 5d91771b789d1406b2e2d45d3f41b15bc7223f88428c6ed8ef05989519b5e6f3
