@@ -22,8 +22,9 @@
     "namespace": "elgg",
     "baseDir": "vendors/assets",
     "dependencies": {
-      "angular.js": "github:angular/bower-angular/v1.2.3#angular.js",
-      "angular-csp.css": "github:angular/bower-angular/v1.2.3#angular-csp.css",
+      "angular.js": "github:angular/bower-angular/v1.2.13#angular.js",
+      "angular-sanitize.js": "github:angular/bower-angular-sanitize/v1.2.13#angular-sanitize.js",
+      "angular-csp.css": "github:angular/bower-angular/v1.2.13#angular-csp.css",
       "jquery": "github:jquery/jquery/2.0.3",
       "json.js": "github:millermedeiros/requirejs-plugins/v1.0.2#src/json.js",
       "require": "github:jrburke/requirejs/2.1.9",
@@ -37,7 +38,10 @@
       "require-css/css": "github:guybedford/require-css/0.1.1#css.js",
       "require-css/normalize": "github:guybedford/require-css/0.1.1#normalize.js",
       "require-css/css-builder": "github:guybedford/require-css/0.1.1#css-builder.js",
-      "ngRequire": "github:ewinslow/ng-require/master#src"
+      "ngRequire": "github:ewinslow/ng-require/master#src",
+      "angular": "github:angular/bower-angular/v1.2.13#angular.js",
+      "angular-csp": "github:angular/bower-angular/v1.2.13#angular-csp.css",
+      "angular-sanitize": "github:angular/bower-angular-sanitize/v1.2.13#angular-sanitize.js"
     }
   }
 }

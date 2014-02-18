@@ -7,12 +7,10 @@ define(function(require) {
             "elggBlogSaveForm"
         ],
         "states": {
-            "blog": {
-                "controller": true,
-                "parent": "default",
-                "template": true,
-                "url": "/blog"
-            }
+            "blog": require('./states/blog/main'),
+            "blog.add": require('./states/blog.add/main'),
+            "blog.edit": require('./states/blog.edit/main'),
+            "blog.view": require('./states/blog.view/main'),
         }
     });
 });

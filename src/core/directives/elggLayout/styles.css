@@ -36,6 +36,16 @@
 	margin-bottom: 10px;
 }
 
+.elgg-layout-one-column {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.elgg-main > .elgg-head {
+    text-align: center;
+}
+
 .elgg-layout-one-sidebar .elgg-main {
 	float: left;
 	width: 72.525252%;
