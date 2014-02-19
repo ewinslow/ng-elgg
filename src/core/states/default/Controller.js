@@ -27,6 +27,10 @@ define(function() {
             label: 'Events',
             icon: 'none',
         }, {
+            href: 'https://github.com/ewinslow/ng-elgg/issues/new',
+            label: 'Send feedback',
+            icon: 'none'
+        }, {
             href: $state.href('login'),
             label: "Log in",
             icon: 'none'
