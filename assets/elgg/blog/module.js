@@ -4,13 +4,13 @@ define(function(require) {
 
     return createModule('elgg/blog', [elggCore], {
         "directives": [
-            "elggBlogSaveForm"
+            "elggFormBlogSave"
         ],
         "states": {
             "blog": require('./states/blog/main'),
             "blog.add": require('./states/blog.add/main'),
             "blog.edit": require('./states/blog.edit/main'),
             "blog.view": require('./states/blog.view/main'),
-        }
+        },
     });
 });

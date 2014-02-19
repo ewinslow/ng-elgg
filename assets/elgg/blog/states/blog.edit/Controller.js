@@ -2,15 +2,9 @@ define(function(require) {
     /**
      * @ngInject
      */
-    function Controller($scope, blog) {
-        $scope.blog = blog
+    function Controller(blog) {
+        this.blog = blog
     }
-
-    Controller.$resolve = {
-        blog: function($route, evanDatabase) {
-            return evanDatabase.getEntity($route.current.params.guid);
-        },
-    };
-
+    
     return Controller;
 });

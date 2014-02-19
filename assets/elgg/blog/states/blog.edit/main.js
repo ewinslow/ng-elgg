@@ -2,5 +2,6 @@ define({
     "controller": true,
     "parent": "default",
     "template": true,
-    "url": "/blog/:alias/edit"
+    "url": "/blog/:alias/edit",
+    "resolve": ["blog"],
 });

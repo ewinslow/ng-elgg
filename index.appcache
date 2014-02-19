@@ -21,15 +21,16 @@ assets/elgg/accounts/states/register/main.js
 assets/elgg/accounts/states/register/template.ng
 assets/elgg/activity/states/site/Controller.js
 assets/elgg/activity/states/site/template.html
-assets/elgg/blog/directives/elggBlogSaveForm/Controller.js
-assets/elgg/blog/directives/elggBlogSaveForm/directive.js
-assets/elgg/blog/directives/elggBlogSaveForm/template.ng
+assets/elgg/blog/directives/elggFormBlogSave/Controller.js
+assets/elgg/blog/directives/elggFormBlogSave/directive.js
+assets/elgg/blog/directives/elggFormBlogSave/template.ng
 assets/elgg/blog/module.js
 assets/elgg/blog/states/blog.add/Controller.js
 assets/elgg/blog/states/blog.add/main.js
 assets/elgg/blog/states/blog.add/template.ng
 assets/elgg/blog/states/blog.edit/Controller.js
 assets/elgg/blog/states/blog.edit/main.js
+assets/elgg/blog/states/blog.edit/resolve.js
 assets/elgg/blog/states/blog.edit/template.ng
 assets/elgg/blog/states/blog.view/Controller.js
 assets/elgg/blog/states/blog.view/main.js
@@ -234,4 +235,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: 5d91771b789d1406b2e2d45d3f41b15bc7223f88428c6ed8ef05989519b5e6f3
+# hash: 77e9978f313d8231b6f4b687fb30c8c4e52cb313fdee731224b84aed5223f23c
