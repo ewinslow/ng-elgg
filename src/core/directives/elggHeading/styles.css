@@ -14,10 +14,6 @@
 }
 
 .elgg-heading-main {
-    float: left;
-    margin: 0 10px 0 0;
-    color: #0a2b33;
-    font-family: 'Crimson Text', serif;
     font-size: 23px;
     text-transform: uppercase;
 }
