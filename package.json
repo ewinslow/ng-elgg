@@ -15,7 +15,12 @@
   "profiles": {
     "gh-pages": {
       "name": "Elgg 2.0 Demo",
-      "baseUrl": "http://ewinslow.github.io/ng-elgg/"
+      "baseUrl": "http://ewinslow.github.io/ng-elgg/",
+      "google": {
+        "analytics": {
+          "code": "UA-48285737-1"
+        }
+      }
     }
   },
   "volo": {
@@ -41,7 +46,8 @@
       "ngRequire": "github:ewinslow/ng-require/master#src",
       "angular": "github:angular/bower-angular/v1.2.13#angular.js",
       "angular-csp": "github:angular/bower-angular/v1.2.13#angular-csp.css",
-      "angular-sanitize": "github:angular/bower-angular-sanitize/v1.2.13#angular-sanitize.js"
+      "angular-sanitize": "github:angular/bower-angular-sanitize/v1.2.13#angular-sanitize.js",
+      "angularytics": "github:mgonto/angularytics/0.2.3#dist/angularytics.js"
     }
   }
 }
