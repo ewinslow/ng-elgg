@@ -29,7 +29,9 @@ define(function(require) {
             "default": require('./states/default/main'),
             "index": require('./states/index/main'),
         }
-    }).run(function configureAnalytics(profile, Angularytics) {
+    }).config(function configureAngularytics(AngularyticsProvider) {
+        AngularyticsProvider.setEventHandlers(['GoogleUniversal', 'Console']);
+    }).run(function loadAndConfigureGoogleAnalytics(profile) {
         var google = profile.google || {};
         var analytics = google.analytics || {};
         
@@ -58,7 +60,19 @@ define(function(require) {
             });
             
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    }).config(function(AngularyticsProvider) {
-        AngularyticsProvider.setEventHandlers(['GoogleUniversal', 'Console']);
+    }).run(function trackStateChangeEvents($rootScope, Angularytics) {
+        var $stateChangeStartTime;
+        
+        $rootScope.$on('$stateChangeStart', function setStartTime() {
+            $stateChangeStartTime = Date.now();
+        });
+        
+        $rootScope.$on('$stateChangeSuccess', function trackSuccess(event, toState) {
+           Angularytics.trackEvent('$stateChange', 'success', toState.name, Date.now() - $stateChangeStartTime, true); 
+        });
+        
+        $rootScope.$on('$stateChangeError', function trackError(event, toState) {
+           Angularytics.trackEvent('$stateChange', 'error', toState.name, Date.now() - $stateChangeStartTime, true); 
+        });
     });
 });
