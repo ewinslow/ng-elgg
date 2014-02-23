@@ -5,11 +5,13 @@ define(function(require) {
     require('angular-sanitize');
     require('angular-snap');
     require('angular-translate');
+    require('angularytics');
 
     return createModule('elgg/core', [
         angular.module('pascalprecht.translate'),
         angular.module('snap'),
         angular.module('ngSanitize'),
+        angular.module('angularytics'),
     ], {
         "directives": [
             "elggButton",
@@ -27,5 +29,36 @@ define(function(require) {
             "default": require('./states/default/main'),
             "index": require('./states/index/main'),
         }
+    }).run(function configureAnalytics(profile, Angularytics) {
+        var google = profile.google || {};
+        var analytics = google.analytics || {};
+        
+        if (!analytics.code || !profile.baseUrl) {
+            return;
+        }
+        
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+            
+            a = s.createElement('a');
+            a.href = profile.baseUrl;
+            
+            i[r]('set', 'forceSSL', true);
+            i[r]('create', analytics.code, {
+                'cookieDomain': a.host,
+                'cookiePath': a.pathname
+            });
+            
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    }).config(function(AngularyticsProvider) {
+        AngularyticsProvider.setEventHandlers(['GoogleUniversal', 'Console']);
     });
 });

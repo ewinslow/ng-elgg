@@ -1,4 +1,3 @@
-
 DirectoryIndex index.html
 
 FileETag MTime Size
@@ -65,11 +64,13 @@ FileETag MTime Size
 </IfModule>
 
 <IfModule mod_headers.c>
-    Header set Content-Security-Policy "default-src 'self' https://lorempixel.com"
-    Header set X-Content-Security-Policy "default-src 'self' https://lorempixel.com"
-    Header set X-WebKit-CSP "default-src 'self' https://lorempixel.com"
+    Header set Content-Security-Policy "default-src 'self' https://lorempixel.com https://www.google-analytics.com"
+    Header set X-Content-Security-Policy "default-src 'self' https://lorempixel.com https://www.google-analytics.com"
+    Header set X-WebKit-CSP "default-src 'self' https://lorempixel.com https://www.google-analytics.com"
     <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
         Header unset Content-Security-Policy
+        Header unset X-Content-Security-Policy
+        Header unset X-WebKit-CSP
     </FilesMatch>
  </IfModule>
 
