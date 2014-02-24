@@ -27,7 +27,15 @@
 	z-index: 3;
 }
 .elgg-page-header > .elgg-inner {
+    display: table;
+	height: 2.5em;
 	position: relative;
+}
+
+.elgg-page-header > .elgg-inner > * {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .elgg-page-header-logo {

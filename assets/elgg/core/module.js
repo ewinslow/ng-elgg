@@ -16,6 +16,7 @@ define(function(require) {
         "directives": [
             "elggButton",
             "elggGallery",
+            "elggGrid",
             "elggHeading",
             "elggIcon",
             "elggFormField",

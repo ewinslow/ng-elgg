@@ -4,28 +4,31 @@
         	<h2 elgg-heading="main">Log in</h2>
         </div>
 		<div class="elgg-content">
-			<form class="elgg-form elgg-form-account elgg-form-login">
+			<form name="$form" class="elgg-form elgg-form-account elgg-form-login">
             	<label class="elgg-form-field">
             	    <span class="elgg-form-field-label">Email</span>
-                	<input type="email" name="username" autocorrect="false" class="elgg-input-text" autofocus>
+                	<input type="email" name="email" autocorrect="false" autofocus ng-model="ctrl.email" required>
                 </label>
-                <div>
-                	<label>
-                		<input type="checkbox" name="persistent" value="true" checked>
-                		<span>Remember me</span>
-                	</label>
-                </div>
-                <label class="elgg-form-field">
+                <label class="elgg-form-field" ng-show="ctrl.showPassword">
                 	<span class="elgg-form-field-label">Password</span>
-                    <input type="password" name="password" class="elgg-input-password">
+                    <input type="password" name="password">
                 </label>
-            	<div>
-                	<a ui-sref="forgotpassword">Lost password</a>
-                	<a ui-sref="register">Register</a>
-                </div>
                 <div class="elgg-form-field">
-                	<button type="submit" elgg-button="submit">Log in</button>
-                </div>
+                    <div class="elgg-grid-gutters">
+                      	<div class="elgg-col-1of2">
+                          	<button type="submit" elgg-button="submit" class="elgg-width-full"
+                          	        ng-disabled="!$form.email.$valid"
+                          	        ng-click="ctrl.showPassword = true">
+                          	    Sign in
+                          	</button>
+                        </div>
+                        <div class="elgg-col-1of2">
+                          	<a ui-sref="register({ email: ctrl.email })" elgg-button="action" class="elgg-width-full">
+                          	    Sign up
+                          	</a>
+                        </div>
+                    </div>
+              	</div>
             </form>
         </div>
 	</div>

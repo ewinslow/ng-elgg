@@ -1,9 +1,3 @@
-.elgg-menu-title {
-	display: inline-block;
-	right: 0;
-	position: absolute;
-}
-
 .elgg-menu-title > li {
 	display: inline-block;
 	margin-left: 4px;

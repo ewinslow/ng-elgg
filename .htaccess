@@ -3,15 +3,9 @@ DirectoryIndex index.html
 FileETag MTime Size
 
 <IfModule mod_expires.c>
-
-    ExpiresActive on
-    ExpiresDefault      "access plus 0 seconds"
-    
+   ExpiresActive on
+   ExpiresDefault      "access plus 0 seconds"
 </IfModule>
-
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|ng|swf)$">
-    Header set Cache-Control "public"
-</FilesMatch>
 
 <IfModule mod_mime.c>
 
@@ -72,7 +66,10 @@ FileETag MTime Size
         Header unset X-Content-Security-Policy
         Header unset X-WebKit-CSP
     </FilesMatch>
- </IfModule>
+    <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|ng|swf)$">
+        Header set Cache-Control "public"
+    </FilesMatch>
+</IfModule>
 
 # gzip compression.
 <IfModule mod_deflate.c>

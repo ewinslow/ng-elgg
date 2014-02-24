@@ -1,11 +1,13 @@
 <div class="elgg-page elgg-page-default">
     <header class="elgg-page-header">
         <div class="elgg-inner">
-            <button snap-toggle="left" elgg-button="clear">
-                <span elgg-icon="menu"></span>
-                <img src="favicon.svg" alt="" width="24" height="24" class="elgg-page-header-logo">
-            </button>
-            <span>Elgg 2.0 Demo</span>
+            <label>
+                <button snap-toggle="left" elgg-button="clear">
+                    <span elgg-icon="menu"></span>
+                    <img src="favicon.svg" alt="" width="24" height="24" class="elgg-page-header-logo">
+                </button>
+            </label>
+            <span class="elgg-width-full">Elgg 2.0 Demo</span>
             <ul elgg-menu="title">
                 <li>
                     <button elgg-button="clear">
