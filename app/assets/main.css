@@ -4,6 +4,16 @@
 	color: #999;
 }
 
+.elgg-block {
+    display: block !important;
+}
+
+.elgg-width-full {
+    width: 100% !important;
+}
+
+[hidden] { display: none !important; }
+
 .snap-content {
 	background: white;
 	box-shadow: 0 0 10px 3px black;
@@ -26,4 +36,10 @@ body, html {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+}
+
+input, select {
+    box-sizing: border-box;
+    height: 2em;
+    padding: .25em;
 }
