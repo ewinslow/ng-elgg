@@ -9,15 +9,18 @@
 	box-sizing: border-box;
 	color: #FFF;
 	cursor: pointer;
+	display: inline-block;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	height: 2.5em;
-	min-width: 2.5em;
-	line-height: 2.5em;
+	height: 2em;
+	/* not sure why, but 1.75em makes the
+     * text look the most centered for
+     * buttons and links */
+	line-height: 1.75em; 
+	min-width: 2em;
 	padding: 0 .5em;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
-	width: auto;
 }
 
 .elgg-button:hover,
