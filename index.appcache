@@ -11,15 +11,9 @@ assets/angular.js
 assets/angularytics.js
 assets/css.js
 assets/elgg/accounts/module.js
-assets/elgg/accounts/states/forgotpassword/Controller.js
-assets/elgg/accounts/states/forgotpassword/main.js
-assets/elgg/accounts/states/forgotpassword/template.ng
 assets/elgg/accounts/states/login/Controller.js
 assets/elgg/accounts/states/login/main.js
 assets/elgg/accounts/states/login/template.ng
-assets/elgg/accounts/states/register/Controller.js
-assets/elgg/accounts/states/register/main.js
-assets/elgg/accounts/states/register/template.ng
 assets/elgg/activity/states/site/Controller.js
 assets/elgg/activity/states/site/template.html
 assets/elgg/blog/directives/elggFormBlogSave/Controller.js
@@ -237,4 +231,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: fa210288a8f2689343b4eb82a39264f881ca2073b0a797ecb86f84286dcd248a
+# hash: ec8b77c0f643706bbf689121628c1adfeb1bb389cf4759933b998de409164241

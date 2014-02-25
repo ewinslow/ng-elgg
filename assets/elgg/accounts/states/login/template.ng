@@ -1,31 +1,31 @@
 <div elgg-layout="one-column">
 	<div class="elgg-body elgg-main">
 		<div class="elgg-head">
-        	<h2 elgg-heading="main">Log in</h2>
+        	<h2 elgg-heading="main">Sign in</h2>
         </div>
 		<div class="elgg-content">
 			<form name="$form" class="elgg-form elgg-form-account elgg-form-login">
             	<label class="elgg-form-field">
             	    <span class="elgg-form-field-label">Email</span>
-                	<input type="email" name="email" autocorrect="false" autofocus ng-model="ctrl.email" required>
-                </label>
-                <label class="elgg-form-field" ng-show="ctrl.showPassword">
-                	<span class="elgg-form-field-label">Password</span>
-                    <input type="password" name="password">
+                    <small>Never shared nor spammed.</small>
+                	<input type="email" name="email" autocorrect="false" autofocus required
+                	       ng-model="ctrl.email" placeholder="user@example.org">
                 </label>
                 <div class="elgg-form-field">
                     <div class="elgg-grid-gutters">
                       	<div class="elgg-col-1of2">
-                          	<button type="submit" elgg-button="submit" class="elgg-width-full"
-                          	        ng-disabled="!$form.email.$valid"
-                          	        ng-click="ctrl.showPassword = true">
+                          	<button type="submit"
+                          	        elgg-button="submit"
+                          	        class="elgg-width-full">
                           	    Sign in
                           	</button>
                         </div>
                         <div class="elgg-col-1of2">
-                          	<a ui-sref="register({ email: ctrl.email })" elgg-button="action" class="elgg-width-full">
-                          	    Sign up
-                          	</a>
+                          	<button type="submit"
+                          	        elgg-button="submit"
+                          	        class="elgg-width-full">
+                          	    Register
+                          	</button>
                         </div>
                     </div>
               	</div>

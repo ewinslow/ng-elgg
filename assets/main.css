@@ -42,4 +42,5 @@ input, select {
     box-sizing: border-box;
     height: 2em;
     padding: .25em;
+    vertical-align: middle;
 }
