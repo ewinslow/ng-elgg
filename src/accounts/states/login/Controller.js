@@ -2,7 +2,7 @@ define(function() {
     /**
      * @ngInject
      */
-    return function() {
-        this.style = "special";
+    return function(profile) {
+        this.appName = profile.name;
     };
 });
