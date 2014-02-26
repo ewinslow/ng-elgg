@@ -165,13 +165,13 @@ define(function(require) {
             this.config['services'][name] = false;
             this.config['factories'][name] = false;
 
-            if (type === 'services') {
-                name = name.charAt(0).toUpperCase() + name.slice(1);
-            }
+            // Capitalize service names ('someService' => 'SomeService')
+            var moduleName = type !== 'services' ? name :
+                name.charAt(0).toUpperCase() + name.slice(1)
 
             var module = servicesConfig[name];
             if (module === true) {
-                module = base + '/' + type + '/' + name;
+                module = base + '/' + type + '/' + moduleName;
             }
 
             this.config[type][name] = module;
