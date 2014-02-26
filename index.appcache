@@ -163,7 +163,9 @@ assets/elgg/core/factories/elggApi.js
 assets/elgg/core/filters/calendar.js
 assets/elgg/core/filters/elggEcho.js
 assets/elgg/core/filters/fromNow.js
+assets/elgg/core/models/ElggMenu.js
 assets/elgg/core/module.js
+assets/elgg/core/services/ElggMenus.js
 assets/elgg/core/states/default/Controller.js
 assets/elgg/core/states/default/main.js
 assets/elgg/core/states/default/template.ng
@@ -231,4 +233,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: d26f3df649f75dd608ae1355af5d32e447988c2ffeda7670a29ecbb5d75650aa
+# hash: ff266f276a2aa73106b8745054767fa13c840563ba14690471e4a32f5509d4c9

@@ -26,6 +26,9 @@ define(function(require) {
         ],
         "factories": [],
         "filters": [],
+        "services": [
+            "elggMenus"
+        ],
         "states": {
             "default": require('./states/default/main'),
             "index": require('./states/index/main'),
