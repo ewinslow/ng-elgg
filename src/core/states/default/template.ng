@@ -24,7 +24,13 @@
         <snap-drawers>
             <nav snap-drawer="left" class="elgg-page-navbar">
                 <ul elgg-menu="site">
-                    <li ng-repeat="menuItem in ctrl.menuItems" snap-toggle="left">
+                    <li ng-repeat="menuItem in ctrl.defaultItems" snap-toggle="left">
+                        <a href="{{menuItem.href}}">
+                            <span elgg-icon="{{menuItem.icon}}"></span>
+                            <span>{{menuItem.label}}</span>
+                        </a>
+                    </li>
+                    <li ng-repeat="menuItem in ctrl.altItems" snap-toggle="left">
                         <a href="{{menuItem.href}}">
                             <span elgg-icon="{{menuItem.icon}}"></span>
                             <span>{{menuItem.label}}</span>

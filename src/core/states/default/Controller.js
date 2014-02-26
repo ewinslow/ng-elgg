@@ -2,39 +2,74 @@ define(function() {
     /**
      * @ngInject
      */
-    var Controller = function($state, $window) {
+    var Controller = function($state, $window, elggMenus) {
         /** @private */
         this.location = $window.location;
+        
+        var menu = elggMenus.getOrCreate('site');
+        menu.register('home', function() {
+            return {
+                href: $state.href('index'),
+                label: 'Home',
+                icon: 'home',
+            };
+        });
 
-        this.menuItems = [{
-            href: $state.href('index'),
-            label: 'Home',
-            icon: 'home',
-        }, {
-            href: $state.href('photos'),
-            label: 'Photos',
-            icon: 'photo',
-        }, {
-            href: $state.href('blog'),
-            label: 'Blog',
-            icon: 'none',
-        }, {
-            href: $state.href('posts'),
-            label: 'Posts',
-            icon: 'none'
-        }, {
-            href: $state.href('events'),
-            label: 'Events',
-            icon: 'none',
-        }, {
-            href: 'https://github.com/ewinslow/ng-elgg/issues/new',
-            label: 'Send feedback',
-            icon: 'none'
-        }, {
-            href: $state.href('login'),
-            label: "Log in",
-            icon: 'none'
-        }];
+        menu.register('photos', function() {
+            return {
+                href: $state.href('photos'),
+                label: 'Photos',
+                icon: 'photo',
+            };
+        });
+        
+        menu.register('blog', function() {
+            return {
+                href: $state.href('blog'),
+                label: 'Blog',
+                icon: 'blog',
+            };
+        });
+        
+        menu.register('posts', function() {
+            return {
+                href: $state.href('posts'),
+                label: 'Posts',
+                icon: 'none',
+                section: "default"
+            };
+        });
+        
+        menu.register('events', function() {
+            return {            
+                href: $state.href('events'),
+                label: 'Events',
+                icon: 'none',
+                section: "default"
+            };
+        });
+
+        menu.register('login', function() {
+            return {
+                section: 'alt',
+                href: $state.href('login'),
+                label: "Log in",
+                icon: 'none'
+            };
+        });
+
+        menu.register('feedback', function() {
+            return  {
+                section: 'alt',
+                href: 'https://github.com/ewinslow/ng-elgg/issues/new',
+                label: 'Send feedback',
+                icon: 'none'
+            };
+        });
+        
+        this.defaultItems = menu.getSection('default');
+
+        this.altItems = menu.getSection('alt');
     };
 
     Controller.prototype.reload = function() {
