@@ -11,9 +11,15 @@ assets/angular.js
 assets/angularytics.js
 assets/css.js
 assets/elgg/accounts/module.js
+assets/elgg/accounts/states/forgotpassword/Controller.js
+assets/elgg/accounts/states/forgotpassword/main.js
+assets/elgg/accounts/states/forgotpassword/template.ng
 assets/elgg/accounts/states/login/Controller.js
 assets/elgg/accounts/states/login/main.js
 assets/elgg/accounts/states/login/template.ng
+assets/elgg/accounts/states/validateemail/Controller.js
+assets/elgg/accounts/states/validateemail/main.js
+assets/elgg/accounts/states/validateemail/template.ng
 assets/elgg/activity/states/site/Controller.js
 assets/elgg/activity/states/site/template.html
 assets/elgg/blog/directives/elggFormBlogSave/Controller.js
@@ -59,6 +65,7 @@ assets/elgg/core/directives/elggGallery/directive.js
 assets/elgg/core/directives/elggGallery/styles.css
 assets/elgg/core/directives/elggGrid/directive.js
 assets/elgg/core/directives/elggGrid/styles.css
+assets/elgg/core/directives/elggHasFocus/directive.js
 assets/elgg/core/directives/elggHeading/directive.js
 assets/elgg/core/directives/elggHeading/styles.css
 assets/elgg/core/directives/elggIcon/directive.js
@@ -90,7 +97,6 @@ assets/elgg/core/directives/elggMenu/user.css
 assets/elgg/core/directives/elggMenu/widget.css
 assets/elgg/core/directives/elggPage/directive.js
 assets/elgg/core/directives/elggPage/styles.css
-assets/elgg/core/directives/focusModel/factory.js
 assets/elgg/core/directives/form/styles.css
 assets/elgg/core/directives/friendlyTime/ngDirective.js
 assets/elgg/core/directives/friendlyTime/styles.css
@@ -233,4 +239,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: 43e9cfc9d3c5fbb00325dbb89e6a9419f0b517c17543a72042120fb4b39938c3
+# hash: 602dce95996bdddc4ddc10ee33df98d88252353c03d75c56ccf5062410b0324a

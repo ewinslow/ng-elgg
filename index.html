@@ -13,9 +13,6 @@
     <link rel="icon" sizes="any" type="image/svg" href="favicon.svg">
     <link rel="stylesheet" href="assets/main.css">
     <link ng-repeat="link in page.links" rel="{{link.rel}}" ng-href="{{link.href}}">
-
-    <script src="assets/require.js" defer></script>
-    <script src="assets/main.js" defer></script>
 </head>
 
 <body ui-view>
@@ -28,5 +25,8 @@
             <progress></progress>
         </div>
     </div>
+
+    <script src="assets/require.js"></script>
+    <script src="assets/main.js"></script>
 </body>
 </html>
