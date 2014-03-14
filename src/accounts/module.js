@@ -5,6 +5,8 @@ define(function(require) {
     return createModule('elgg/accounts', [elggCore], {
         "states": {
             "login": require('./states/login/main'),
+            "validateemail": require('./states/validateemail/main'),
+            "forgotpassword": require('./states/forgotpassword/main'),
         }
     });
 });

@@ -1,34 +1,63 @@
 <div elgg-layout="one-column">
 	<div class="elgg-body elgg-main">
 		<div class="elgg-head">
-        	<h2 elgg-heading="main">Sign in</h2>
+        	<h2 elgg-heading="main">Secure Sign In</h2>
         </div>
 		<div class="elgg-content">
-			<form name="$form" class="elgg-form elgg-form-account elgg-form-login">
+			<form name="$form" class="elgg-form elgg-form-account elgg-form-login" ng-submit="ctrl.submit()">
             	<label class="elgg-form-field">
             	    <span class="elgg-form-field-label">Email</span>
-                    <small>Never shared nor spammed.</small>
+                    <small>We don't share your email with anyone.</small>
                 	<input type="email" name="email" autocorrect="false" autofocus required
-                	       ng-model="ctrl.email" placeholder="user@example.org">
+                	       ng-model="ctrl.email.value" placeholder="user@example.org"
+                           elgg-has-focus="ctrl.email.hasFocus" autocomplete="true">
+                	<ul ng-if="$form.email.$dirty && $form.email.$invalid">
+                    	<li ng-if="$form.email.$error.required">You must provide your email.</li>
+                    	<li ng-if="$form.email.$error.email">This doesn't quite look like an email. :(</li>
+                  	</ul>
                 </label>
-                <div class="elgg-form-field">
+                <label ng-class="{'elgg-form-field': true, 'visuallyhidden': !ctrl.password.required}"
+                       aria-hidden="{{!ctrl.password.required}}">
+                    <span class="elgg-form-field-label">Elgg Demo password</span>
+                    <input type="password" name="password"
+                           ng-model="ctrl.password.value"
+                           tabindex="{{ctrl.password.required ? 0 : -1}}"
+                           elgg-has-focus="ctrl.password.hasFocus">
+                </label>
+                <div ng-if="ctrl.error.code == 501">
+                    Oops, password login not supported yet... coming soon!
+                </div>
+                <div class="elgg-form-field" ng-show="!ctrl.isSubmitting">
                     <div class="elgg-grid-gutters">
                       	<div class="elgg-col-1of2">
                           	<button type="submit"
                           	        elgg-button="submit"
-                          	        class="elgg-width-full">
+                          	        class="elgg-width-full"
+                                    ng-click="ctrl.action = 'signin'">
                           	    Sign in
                           	</button>
                         </div>
                         <div class="elgg-col-1of2">
                           	<button type="submit"
                           	        elgg-button="submit"
-                          	        class="elgg-width-full">
+                          	        class="elgg-width-full"
+                                    ng-click="ctrl.action = 'register'"
+                                    ng-show="!ctrl.password.required">
                           	    Register
                           	</button>
+                            <button type="submit"
+                                    elgg-button="action"
+                                    class="elgg-width-full"
+                                    ng-click="ctrl.action = 'forgotpassword'"
+                                    ng-show="ctrl.password.required">
+                                Forgot password
+                            </button>
                         </div>
                     </div>
               	</div>
+                <div class="elgg-form-field" ng-show="ctrl.isSubmitting">
+                    <progress>Signing in...</progress>
+                </div>
             </form>
         </div>
 	</div>

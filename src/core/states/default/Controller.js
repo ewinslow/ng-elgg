@@ -2,7 +2,9 @@ define(function() {
     /**
      * @ngInject
      */
-    var Controller = function($state, $window, elggMenus) {
+    var Controller = function($state, $window, elggMenus, profile) {
+        this.appName = profile.name;
+        
         /** @private */
         this.location = $window.location;
         
@@ -36,7 +38,6 @@ define(function() {
                 href: $state.href('posts'),
                 label: 'Posts',
                 icon: 'none',
-                section: "default"
             };
         });
         
@@ -45,7 +46,6 @@ define(function() {
                 href: $state.href('events'),
                 label: 'Events',
                 icon: 'none',
-                section: "default"
             };
         });
 
@@ -54,7 +54,7 @@ define(function() {
                 section: 'alt',
                 href: $state.href('login'),
                 label: "Log in",
-                icon: 'none'
+                icon: 'lock-closed'
             };
         });
 
