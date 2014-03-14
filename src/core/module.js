@@ -17,6 +17,7 @@ define(function(require) {
             "elggButton",
             "elggGallery",
             "elggGrid",
+            "elggHasFocus",
             "elggHeading",
             "elggIcon",
             "elggFormField",
