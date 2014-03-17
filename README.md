@@ -76,22 +76,18 @@ comes with no baggage of legacy, so we're free to do this correctly from
 the start.
 
 
-### Allows you to focus on differentiation right from the start
-
-Lots of apps these days have a very common set of needs, such as the ability
-of users to log in, post content, manage notification settings, etc. This is
-all very tedious to code up again and again. It's better to 
-
-### Get valuable insights into how people use your app
+### Metrics
+The best way to get insight into your users' experience using your app is to
+measure everything.
 
 ng-elgg comes out-of-the-box integrated with Google Analytics. But we go way
 beyond just tracking pageviews:
 
- * Abandonment rates for every form
- * Which parts of the UI are users interacting with
- * How long is the transition from page to page
- * All the exceptions you're getting and how many
- * A/B experiments framework built in
+ * Abandonment rates for every form (TODO)
+ * Which parts of the UI are users interacting with (TODO)
+ * How long is the transition from page to page (Done!)
+ * All the exceptions you're getting and how many (TODO)
+ * A/B experiments framework built in (TODO)
 
 Each of these can give you really good insights into where your app needs
 improvement and will help you focus on the low-hanging fruit first.
