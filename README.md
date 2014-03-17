@@ -3,7 +3,7 @@ ng-elgg
 
 [![Build Status](https://travis-ci.org/ewinslow/ng-elgg.png?branch=master)](https://travis-ci.org/ewinslow/ng-elgg)
 
-An AngularJS-based implementation of [Elgg](http://elgg.org)'s UI with an offline-first and mobile-first philosophy.
+A secure, offline-capable, mobile-first web client for [Elgg](http://elgg.org) built with AngularJS.
 
 Demo
 ----
@@ -27,8 +27,9 @@ Note also https://github.com/ewinslow/ng-elgg/issues/1
 This will set you up with a local version of the UI.
 
 
-Requirements
+Browser Support
 -----
+Latest 2 versions of modern browsers.
 
 Initial development is only happening on Chrome (desktop and mobile).
 This is to give me freedom to experiment with the cutting edge of web tech.
