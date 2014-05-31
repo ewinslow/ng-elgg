@@ -1,7 +1,5 @@
-define(function(require) {
-    require('css!./styles.css');
+import css from 'css!./styles.css';
 
-    return {
-        restrict: 'C'
-    };
-});
+return {
+    restrict: 'C'
+};

@@ -1,5 +1,8 @@
-define(function() {
-    function Controller($stateParams) {
+export default class {
+    /**
+     * @ngInject
+     */
+    constructor($stateParams) {
         this.album = {
             guid: 0,
             container: {
@@ -9,7 +12,7 @@ define(function() {
         };
     }
 
-    Controller.prototype.submit = function() {
+    submit() {
         /*elgg.action('photos/album/save', {
 			guid: this.album.guid,
 			container_guid: this.album.container.guid,
@@ -23,8 +26,5 @@ define(function() {
 			
 			$rootScope.$digest();
 		});*/
-    };
-
-
-    return Controller;
-});
+    }
+};

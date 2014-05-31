@@ -1,16 +1,14 @@
-define(function(require) {
-    var createModule = require('ngRequire/createModule');
-    var elggCore = require('elgg/core/module');
+import createModule from 'ngRequire/createModule';
+import elggCore from 'elgg/core/module';
 
-    return createModule('elgg/blog', [elggCore], {
-        "directives": [
-            "elggFormBlogSave"
-        ],
-        "states": {
-            "blog": require('./states/blog/main'),
-            "blog.add": require('./states/blog.add/main'),
-            "blog.edit": require('./states/blog.edit/main'),
-            "blog.view": require('./states/blog.view/main'),
-        },
-    });
+export default createModule('elgg/blog', [elggCore], {
+    "directives": [
+        "elggFormBlogSave"
+    ],
+    "states": {
+        "blog": require('./states/blog/main'),
+        "blog.add": require('./states/blog.add/main'),
+        "blog.edit": require('./states/blog.edit/main'),
+        "blog.view": require('./states/blog.view/main'),
+    },
 });

@@ -1,11 +1,10 @@
-define(function() {
+export default class {
     /**
      * @ngInject
-     * @constructor
      */
-    return function Controller(photos, i18n) {
+    constructor(photos, i18n) {
         this.photos = photos;
 
         this.i18n = i18n;
-    };
-});
+    }
+};

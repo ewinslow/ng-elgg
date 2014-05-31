@@ -1,8 +1,11 @@
-define(function(require) {
+/**
+ * @ngInject
+ */
+export default class {
     /**
      * @ngInject
      */
-    function Controller($scope, $routeParams) {
+    constructor($scope, $routeParams) {
         $scope.ctrl = this;
 
         this.blog = $scope.blog = {
@@ -14,7 +17,5 @@ define(function(require) {
             status: 'draft',
             comments_on: 'On',
         };
-    };
-    
-    return Controller;
-});
+    }
+};

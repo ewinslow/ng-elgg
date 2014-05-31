@@ -1,28 +1,26 @@
-define(function(require) {
-    require('css!./styles.css')
+import css from 'css!./styles.css'
 
-    var styles = [
-        'photos'
-    ];
+var styles = [
+    'photos'
+];
 
-    return {
-        restrict: 'A',
-        /**
-         * @ngInject
-         */
-        link: function($element, $attrs) {
-            $element.addClass('elgg-gallery');
+export default {
+    restrict: 'A',
+    /**
+     * @ngInject
+     */
+    link: function($element, $attrs) {
+        $element.addClass('elgg-gallery');
 
-            $attrs.$observe('elggGallery', function(style) {
+        $attrs.$observe('elggGallery', function(style) {
 
-                styles.forEach(function(oldStyle) {
-                    $element.removeClass('elgg-gallery-' + oldStyle);
-                })
+            styles.forEach(function(oldStyle) {
+                $element.removeClass('elgg-gallery-' + oldStyle);
+            })
 
-                if (styles.indexOf(style) >= 0) {
-                    $element.addClass('elgg-gallery-' + style);
-                }
-            });
-        }
-    };
-});
+            if (styles.indexOf(style) >= 0) {
+                $element.addClass('elgg-gallery-' + style);
+            }
+        });
+    }
+};

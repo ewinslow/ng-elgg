@@ -1,9 +1,10 @@
-define(function() {
-    return {
-        post: function($stateParams) {
-            return {
-                "id": $stateParams.post
-            };
-        }
-    };
-});
+export default {
+    /**
+     * @bgInject
+     */
+    post: function($stateParams) {
+        return {
+            "id": $stateParams.post
+        };
+    }
+};

@@ -1,14 +1,13 @@
-define(function() {
-    
-    function ElggMenu() {
+export default class {    
+    constructor() {
         this.items_ = {};
     }
     
-    ElggMenu.prototype.register = function(itemName, callback) {
+    register(itemName, callback) {
         this.items_[itemName] = callback;
-    };
+    }
     
-    ElggMenu.prototype.getSection = function(sectionName) {
+    getSection(sectionName) {
         var items = [], key, item;
         
         for (key in this.items_) {
@@ -21,7 +20,5 @@ define(function() {
         }
         
         return items;
-    };
-    
-    return ElggMenu;
-});
+    }
+};

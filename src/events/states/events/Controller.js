@@ -1,9 +1,8 @@
-define(function() {
+export default class {
     /**
      * @ngInject
-     * @controller
      */
-    return function Controller(events) {
+    constructor(events) {
         this.events = events;
-    };
-});
+    }
+};

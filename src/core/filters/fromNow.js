@@ -1,12 +1,10 @@
-define(function(require) {
-    var moment = require('moment');
+import moment from 'moment';
 
-    /**
-     * @ngInject
-     */
-    return function() {
-        return function(dateString) {
-            return moment(new Date(dateString)).fromNow();
-        };
+/**
+ * @ngInject
+ */
+export default function() {
+    return function(dateString) {
+        return moment(new Date(dateString)).fromNow();
     };
-});
+};
