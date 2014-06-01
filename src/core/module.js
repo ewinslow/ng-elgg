@@ -4,6 +4,9 @@ import $sanitize from 'angular-sanitize';
 import $snap from 'angular-snap';
 import $translate from 'angular-translate';
 import angularytics from 'angularytics';
+import accountSettingsPage from './states/settings.account/main';
+import defaultPage from './states/default/main';
+import indexPage from './states/index/main';
 
 export default createModule('elgg/core', [
     angular.module('pascalprecht.translate'),
@@ -28,9 +31,9 @@ export default createModule('elgg/core', [
         "elggMenus"
     ],
     "states": {
-        "settings.account": require('./states/settings.account/main'),
-        "default": require('./states/default/main'),
-        "index": require('./states/index/main')
+        "settings.account": accountSettingsPage,
+        "default": defaultPage,
+        "index": indexPage
     }
 }).config(function configureAngularytics(AngularyticsProvider) {
     AngularyticsProvider.setEventHandlers(['GoogleUniversal', 'Console']);

@@ -1,0 +1,11 @@
+<div elgg-layout="one-column">
+	<div class="elgg-body elgg-main">
+		<div class="elgg-head">
+        	<h2 elgg-heading="main">Check your email</h2>
+        </div>
+		<div class="elgg-content">
+			<p>If we were actually sending emails, here is where we would tell you to click the link we sent to <b>{{ctrl.email}}</b> to reset your password.</p>
+            <p><button elgg-button="submit" ng-click="ctrl.resend()">Resend link</button></p>
+        </div>
+	</div>
+</div>

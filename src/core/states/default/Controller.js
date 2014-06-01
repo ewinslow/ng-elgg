@@ -2,7 +2,9 @@ export default class {
     /**
      * @ngInject
      */
-    constructor($state, $window, elggMenus) {
+    constructor($state, $window, elggMenus, profile) {
+        this.appName = profile.name;
+        
         /** @private */
         this.location = $window.location;
         
@@ -37,7 +39,6 @@ export default class {
                 href: $state.href('posts'),
                 label: 'Posts',
                 icon: 'none',
-                section: "default"
             };
         });
         
@@ -46,7 +47,6 @@ export default class {
                 href: $state.href('events'),
                 label: 'Events',
                 icon: 'none',
-                section: "default"
             };
         });
 
@@ -65,7 +65,7 @@ export default class {
                 section: 'alt',
                 href: $state.href('login'),
                 label: "Log in",
-                icon: 'none'
+                icon: 'lock-closed'
             };
         });
 
