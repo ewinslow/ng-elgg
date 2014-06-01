@@ -7,7 +7,7 @@ define(['css!./styles.css'], function($__0) {
     restrict: 'A',
     link: function($element, $attrs) {
       $element.addClass('elgg-icon');
-      $element.addClass('elgg-icon-' + $attrs['elggIcon']);
+      $element.addClass('elgg-icon-' + $attrs[$traceurRuntime.toProperty('elggIcon')]);
     }
   };
   return {

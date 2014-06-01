@@ -7,7 +7,7 @@ define(['css!./styles.css'], function($__0) {
     restrict: 'A',
     link: function($element, $attrs) {
       $element.addClass('elgg-heading');
-      $element.addClass('elgg-heading-' + $attrs['elggHeading']);
+      $element.addClass('elgg-heading-' + $attrs[$traceurRuntime.toProperty('elggHeading')]);
     }
   };
   return {};

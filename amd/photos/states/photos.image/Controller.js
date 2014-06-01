@@ -1,9 +1,12 @@
 define([], function() {
   "use strict";
-  define(function() {
-    return function Controller(image) {
-      this.image = image;
-    };
-  });
-  return {};
+  var $__default = (($traceurRuntime.createClass)(function(image) {
+    this.image = image;
+  }, {}, {}));
+  return {
+    get default() {
+      return $__default;
+    },
+    __esModule: true
+  };
 });

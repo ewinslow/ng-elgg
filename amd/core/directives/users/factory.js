@@ -18,7 +18,7 @@ define([], function() {
             var tbody = $(element[0]).find('tbody')[0];
             var rows = $(element[0]).find('tr');
             var activeIndex = $scope.getActiveIndex();
-            var activeRow = rows[activeIndex + 1];
+            var activeRow = rows[$traceurRuntime.toProperty(activeIndex + 1)];
             if (isOutOfBounds(activeRow, tbody)) {
               tbody.scrollTop = activeRow.offsetTop - tbody.offsetHeight / 2;
             }

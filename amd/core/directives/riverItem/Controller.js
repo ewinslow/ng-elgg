@@ -17,7 +17,7 @@ define([], function() {
         if (index == -1) {
           return null;
         }
-        return this.activity.object.attachments[index];
+        return this.activity.object.attachments[$traceurRuntime.toProperty(index)];
       },
       getMediaAttachments: function() {
         return this.activity.object.attachments.filter(function(item) {

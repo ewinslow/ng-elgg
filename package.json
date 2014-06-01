@@ -47,7 +47,8 @@
       "angular": "github:angular/bower-angular/v1.2.13#angular.js",
       "angular-csp": "github:angular/bower-angular/v1.2.13#angular-csp.css",
       "angular-sanitize": "github:angular/bower-angular-sanitize/v1.2.13#angular-sanitize.js",
-      "angularytics": "github:mgonto/angularytics/0.2.3#dist/angularytics.js"
+      "angularytics": "github:mgonto/angularytics/0.2.3#dist/angularytics.js",
+      "traceur.js": "github:google/traceur-compiler/0.0.43#bin/traceur.js"
     }
   }
 }

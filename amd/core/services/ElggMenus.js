@@ -6,8 +6,8 @@ define(['../models/ElggMenu'], function($__0) {
   var $__default = (($traceurRuntime.createClass)(function() {
     this.menus_ = {};
   }, {getOrCreate: function(name) {
-      var menu = this.menus_[name] || new ElggMenu();
-      this.menus_[name] = menu;
+      var menu = this.menus_[$traceurRuntime.toProperty(name)] || new ElggMenu();
+      $traceurRuntime.setProperty(this.menus_, name, menu);
       return menu;
     }}, {}));
   return {

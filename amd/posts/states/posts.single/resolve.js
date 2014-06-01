@@ -1,9 +1,12 @@
 define([], function() {
   "use strict";
-  define(function() {
-    return {post: function($stateParams) {
-        return {"id": $stateParams.post};
-      }};
-  });
-  return {};
+  var $__default = {post: function($stateParams) {
+      return {"id": $stateParams.post};
+    }};
+  return {
+    get default() {
+      return $__default;
+    },
+    __esModule: true
+  };
 });

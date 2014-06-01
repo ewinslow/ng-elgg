@@ -1,6 +1,7 @@
 define([], function() {
   "use strict";
-  var $__default = (($traceurRuntime.createClass)(function($state, $window, elggMenus) {
+  var $__default = (($traceurRuntime.createClass)(function($state, $window, elggMenus, profile) {
+    this.appName = profile.name;
     this.location = $window.location;
     var menu = elggMenus.getOrCreate('site');
     menu.register('home', function() {
@@ -28,16 +29,14 @@ define([], function() {
       return {
         href: $state.href('posts'),
         label: 'Posts',
-        icon: 'none',
-        section: "default"
+        icon: 'none'
       };
     });
     menu.register('events', function() {
       return {
         href: $state.href('events'),
         label: 'Events',
-        icon: 'none',
-        section: "default"
+        icon: 'none'
       };
     });
     menu.register('settings', function() {
@@ -53,7 +52,7 @@ define([], function() {
         section: 'alt',
         href: $state.href('login'),
         label: "Log in",
-        icon: 'none'
+        icon: 'lock-closed'
       };
     });
     menu.register('feedback', function() {

@@ -1,9 +1,12 @@
 define([], function() {
   "use strict";
-  define(function() {
-    return function(post) {
-      this.post = post;
-    };
-  });
-  return {};
+  var $__default = (($traceurRuntime.createClass)(function(post) {
+    this.post = post;
+  }, {}, {}));
+  return {
+    get default() {
+      return $__default;
+    },
+    __esModule: true
+  };
 });

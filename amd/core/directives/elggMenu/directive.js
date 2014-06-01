@@ -6,7 +6,7 @@ define(['css!./default.css'], function($__0) {
   var $__default = {
     restrict: 'A',
     link: function($element, $attrs) {
-      var style = $attrs['elggMenu'];
+      var style = $attrs[$traceurRuntime.toProperty('elggMenu')];
       $element.addClass('elgg-menu');
       $element.addClass('elgg-menu-' + style);
       require(['css!./' + style + '.css']);

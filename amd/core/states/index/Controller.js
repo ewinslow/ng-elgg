@@ -1,7 +1,7 @@
 define([], function() {
   "use strict";
   var $__default = (($traceurRuntime.createClass)(function($scope) {
-    $scope['ctrl'] = this;
+    $traceurRuntime.setProperty($scope, 'ctrl', this);
     this.style = "special";
   }, {}, {}));
   return {

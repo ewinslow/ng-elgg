@@ -103,7 +103,7 @@ define([], function() {
         if (nextIndex >= this.getItems().length) {
           return this.getItems()[0];
         }
-        return this.getItems()[nextIndex];
+        return this.getItems()[$traceurRuntime.toProperty(nextIndex)];
       };
       $scope.focusPrevious = function() {
         this.listbox.currentUser = this.getPreviousUser();
@@ -112,26 +112,26 @@ define([], function() {
         var currentUser = this.getCurrentUser();
         var itemsLength = this.getItems().length;
         if (!currentUser) {
-          return this.getItems()[itemsLength - 1];
+          return this.getItems()[$traceurRuntime.toProperty(itemsLength - 1)];
         }
         var currentIndex = this.getItems().indexOf(currentUser);
         var previousIndex = currentIndex - 1;
         if (previousIndex < 0) {
-          return this.getItems()[itemsLength - 1];
+          return this.getItems()[$traceurRuntime.toProperty(itemsLength - 1)];
         }
-        return this.getItems()[previousIndex];
+        return this.getItems()[$traceurRuntime.toProperty(previousIndex)];
       };
       $scope.setSelected = function(user, selected) {
-        this.listbox.selections[user.guid] = selected;
+        $traceurRuntime.setProperty(this.listbox.selections, user.guid, selected);
       };
       $scope.setAllSelections = function(selected) {
         this.getItems().forEach(function(user) {
-          this.listbox.selections[user.guid] = selected;
+          $traceurRuntime.setProperty(this.listbox.selections, user.guid, selected);
         }.bind(this));
       };
       $scope.allSelected = function() {
         return this.getItems().every(function(user) {
-          return this.listbox.selections[user.guid];
+          return this.listbox.selections[$traceurRuntime.toProperty(user.guid)];
         }.bind(this));
       };
       $scope.getOptionClasses = function(user) {
@@ -144,7 +144,7 @@ define([], function() {
         return this.getCurrentUser() == user;
       };
       $scope.isSelected = function(user) {
-        return this.listbox.selections[user.guid];
+        return this.listbox.selections[$traceurRuntime.toProperty(user.guid)];
       };
       elggDatabase.getUsers({banned: 0}).then(function(collection) {
         $scope.getItems = collection.getItems.bind(collection);

@@ -1,6 +1,6 @@
 import Collection from 'evan/Collection';
 
-class Controller extends Collection {
+export default class Controller extends Collection {
     /**
      * @ngInject
      */
@@ -10,12 +10,10 @@ class Controller extends Collection {
         $scope.ctrl = this;
         $scope.user = evanUser;
     }
-}
+};
 
 Controller.$resolve = {
     river: function(evanDatabase) {
         return evanDatabase.getActivity();
     }
 };
-
-export default Controller;

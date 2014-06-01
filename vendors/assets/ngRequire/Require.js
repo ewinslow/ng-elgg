@@ -24,7 +24,7 @@ define(function(require) {
         var defer = this.$q.defer();
 
         require([moduleName], function(module) {
-            defer.resolve(module);
+            defer.resolve(module.__esModule ? module.default : module);
         });
 
         return defer.promise;

@@ -1,14 +1,18 @@
+import addBlogState from './states/blog.add/main';
+import blogState from './states/blog/main';
 import createModule from 'ngRequire/createModule';
+import editBlogState from './states/blog.edit/main';
 import elggCore from 'elgg/core/module';
+import viewBlogState from './states/blog.view/main';
 
 export default createModule('elgg/blog', [elggCore], {
     "directives": [
         "elggFormBlogSave"
     ],
     "states": {
-        "blog": require('./states/blog/main'),
-        "blog.add": require('./states/blog.add/main'),
-        "blog.edit": require('./states/blog.edit/main'),
-        "blog.view": require('./states/blog.view/main'),
+        "blog": blogState,
+        "blog.add": addBlogState,
+        "blog.edit": editBlogState,
+        "blog.view": viewBlogState,
     },
 });

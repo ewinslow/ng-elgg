@@ -4,14 +4,14 @@ define([], function() {
     this.items_ = {};
   }, {
     register: function(itemName, callback) {
-      this.items_[itemName] = callback;
+      $traceurRuntime.setProperty(this.items_, itemName, callback);
     },
     getSection: function(sectionName) {
       var items = [],
           key,
           item;
       for (key in this.items_) {
-        item = this.items_[key]();
+        item = this.items_[$traceurRuntime.toProperty(key)]();
         if (item.section == sectionName || (!item.section && sectionName == 'default')) {
           items.push(item);
         }
