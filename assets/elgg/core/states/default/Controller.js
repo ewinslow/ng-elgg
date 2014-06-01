@@ -1,14 +1,15 @@
-define(function() {
+export default class {
     /**
      * @ngInject
      */
-    var Controller = function($state, $window, elggMenus, profile) {
+    constructor($state, $window, elggMenus, profile) {
         this.appName = profile.name;
         
         /** @private */
         this.location = $window.location;
         
         var menu = elggMenus.getOrCreate('site');
+        
         menu.register('home', function() {
             return {
                 href: $state.href('index'),
@@ -49,6 +50,16 @@ define(function() {
             };
         });
 
+        menu.register('settings', function() {
+            return {
+                section: 'alt',
+                href: $state.href('settings.account'),
+                label: "Settings",
+                icon: 'none'
+            };
+        });
+        
+
         menu.register('login', function() {
             return {
                 section: 'alt',
@@ -70,11 +81,9 @@ define(function() {
         this.defaultItems = menu.getSection('default');
 
         this.altItems = menu.getSection('alt');
-    };
+    }
 
-    Controller.prototype.reload = function() {
+    reload() {
         this.location.reload();
-    };
-
-    return Controller;
-});
+    }
+};

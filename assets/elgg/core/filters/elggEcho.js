@@ -1,8 +1,6 @@
-define(function(require) {
-    /**
-     * @ngInject
-     */
-    return function(elgg) {
-        return elgg.echo;
-    };
-});
+/**
+ * @ngInject
+ */
+export default function(elgg) {
+    return elgg.echo;
+};

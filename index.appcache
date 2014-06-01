@@ -178,6 +178,9 @@ assets/elgg/core/states/default/template.ng
 assets/elgg/core/states/index/Controller.js
 assets/elgg/core/states/index/main.js
 assets/elgg/core/states/index/template.ng
+assets/elgg/core/states/settings.account/Controller.js
+assets/elgg/core/states/settings.account/main.js
+assets/elgg/core/states/settings.account/template.ng
 assets/elgg/events/module.js
 assets/elgg/events/states/events.single/Controller.js
 assets/elgg/events/states/events.single/resolve.js
@@ -239,4 +242,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: 602dce95996bdddc4ddc10ee33df98d88252353c03d75c56ccf5062410b0324a
+# hash: 77699bccfc6c39d663615a56788ecb41119633221a21c8f8ff1120781c648880

@@ -1,5 +1,8 @@
-define(function() {
-    return function Controller(image) {
+export default class {
+    /**
+     * @ngInject
+     */
+    constructor(image) {
         this.image = image;
-    };
-});
+    }
+}

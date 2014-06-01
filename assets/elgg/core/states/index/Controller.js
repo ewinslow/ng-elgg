@@ -1,10 +1,10 @@
-define(function() {
+export default class {
     /**
      * @ngInject
      */
-    return function($scope) {
+    constructor($scope) {
         $scope['ctrl'] = this;
 
         this.style = "special";
-    };
-});
+    }
+};

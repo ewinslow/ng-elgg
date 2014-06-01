@@ -1,14 +1,13 @@
-define(function(require) {
-    /**
-     * @ngInject
-     */
-    function Controller(elggMenus) {
+/**
+ * @ngInject
+ */
+export default class {
+    constructor(elggMenus, menuName) {
         this.elggMenus = elggMenus;
-    };
+        this.menuName = menuName;
+    }
 
-    Controller.prototype.getSections = function(menuName) {
-        return this.elggMenus.get(menuName).getSections();
-    };
-    
-    return Controller;
-});
+    getSections(menuName) {
+        return this.elggMenus.get(this.menuName).getSections();
+    }
+};

@@ -1,5 +1,8 @@
-define(function() {
-    return function(posts) {
+export default class {
+    /**
+     * @ngInject
+     */
+    constructor(posts) {
         this.posts = posts;
-    };
-});
+    }
+};

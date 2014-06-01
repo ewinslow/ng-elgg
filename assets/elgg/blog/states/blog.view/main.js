@@ -1,11 +1,9 @@
-define(function(require) {
-    require('css!./styles.css');
+import 'css!./styles.css';
     
-    return {
-        "controller": true,
-        "parent": "default",
-        "template": true,
-        "url": "/blog/:alias",
-        "resolve": ["blog"],
-    }
-});
+export default {
+    "controller": true,
+    "parent": "default",
+    "template": true,
+    "url": "/blog/:alias",
+    "resolve": ["blog"],
+};

@@ -1,34 +1,32 @@
-define(function(require) {
-    require('css!./styles.css')
+import css from 'css!./styles.css';
 
-    var styles = [
-        'action',
-        'cancel',
-        'delete',
-        'dropdown',
-        'submit',
-        'special',
-        'clear'
-    ];
+var styles = [
+    'action',
+    'cancel',
+    'delete',
+    'dropdown',
+    'submit',
+    'special',
+    'clear'
+];
 
-    return {
-        restrict: 'A',
-        /**
-         * @ngInject
-         */
-        link: function($element, $attrs) {
-            $element.addClass('elgg-button');
+export default {
+    restrict: 'A',
+    /**
+     * @ngInject
+     */
+    link: function($element, $attrs) {
+        $element.addClass('elgg-button');
 
-            $attrs.$observe('elggButton', function(style) {
+        $attrs.$observe('elggButton', function(style) {
 
-                styles.forEach(function(oldStyle) {
-                    $element.removeClass('elgg-button-' + oldStyle);
-                })
+            styles.forEach(function(oldStyle) {
+                $element.removeClass('elgg-button-' + oldStyle);
+            })
 
-                if (styles.indexOf(style) >= 0) {
-                    $element.addClass('elgg-button-' + style);
-                }
-            });
-        }
-    };
-});
+            if (styles.indexOf(style) >= 0) {
+                $element.addClass('elgg-button-' + style);
+            }
+        });
+    }
+};

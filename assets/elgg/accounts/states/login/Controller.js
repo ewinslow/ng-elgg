@@ -1,8 +1,8 @@
-define(function() {
+export default class {
     /**
      * @ngInject
      */
-    function Controller($q, $state, profile) {
+    constructor($q, $state, profile) {
      	this.$q = $q;
         this.$state = $state;
         this.appName = profile.name;
@@ -13,9 +13,9 @@ define(function() {
         this.action = '';
         this.email = {};
         this.password = {};
-    };
+    }
     
-    Controller.prototype.submit = function() {
+    submit() {
         this.isSubmitting = true;
         
         var promise;
@@ -39,16 +39,16 @@ define(function() {
         }.bind(this));
         
         return promise;
-    };
+    }
   
-    Controller.prototype.signIn = function(email) {
+    signIn(email) {
         return this.federatedSignIn(email).catch(function() {
             this.password.required = true;
             this.password.hasFocus = true;
         }.bind(this));
-    };
+    }
     
-  	Controller.prototype.federatedSignIn = function(email) {
+  	federatedSignIn(email) {
       	var defer = this.$q.defer();
       
         setTimeout(function() {
@@ -56,15 +56,15 @@ define(function() {
         }, 1000);
       
         return defer.promise;
-    };
+    }
     
-    Controller.prototype.register = function(email) {
+    register(email) {
         return this.federatedSignIn(email).catch(function() {
             this.$state.go('validateemail', {email: email});
         }.bind(this));
-    };
+    }
     
-    Controller.prototype.passwordSignIn = function() {
+    passwordSignIn() {
         var defer = this.$q.defer();
         
         setTimeout(function() {
@@ -76,17 +76,15 @@ define(function() {
         }.bind(this));
         
         return defer.promise;
-    };
+    }
     
-    Controller.prototype.forgotPassword = function(email) {
+    forgotPassword(email) {
         this.resetPassword(email).then(function() {
             return this.$state.go('forgotpassword', { email: email });
         }.bind(this));
     };
     
-    Controller.prototype.resetPassword = function(email) {
+    resetPassword(email) {
         return this.$q.when({});
-    };
-    
-    return Controller;
-});
+    }
+};

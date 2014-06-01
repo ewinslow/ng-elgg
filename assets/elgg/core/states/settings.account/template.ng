@@ -1,0 +1,19 @@
+<div class="elgg-layout elgg-layout-one-column">
+    <div class="elgg-head">
+        <h2>Account Settings</h2>
+    </div>
+    <div class="elgg-main">
+        <label class="elgg-form-field">
+            <span class="elgg-form-field-label">Email</span>
+            <input disabled ng-model="ctrl.email">
+        </label>
+        <label class="elgg-form-field">
+            <span class="elgg-form-field-label">Language</span>
+            <input ng-model="ctrl.language">
+        </label>
+        <label class="elgg-form-field">
+            <span class="elgg-form-field-label">Timezone</span>
+            <input ng-model="ctrl.timezone">
+        </label>
+    </div>
+</div>

@@ -1,25 +1,21 @@
-define(function(require) {
-    var newClass = require('evan/newClass');
-    var Collection = require('evan/Collection');
+import Collection from 'evan/Collection';
 
-    var Controller = newClass({
-        'extends': Collection,
-        /**
-         * @ngInject
-         */
-        constructor: function($scope, river, $http, evanUser) {
-            Collection.call(this, river, $http);
+class Controller extends Collection {
+    /**
+     * @ngInject
+     */
+    constructor($scope, river, $http, evanUser) {
+        super(river, $http);
 
-            $scope.ctrl = this;
-            $scope.user = evanUser;
-        }
-    });
+        $scope.ctrl = this;
+        $scope.user = evanUser;
+    }
+}
 
-    Controller.$resolve = {
-        river: function(evanDatabase) {
-            return evanDatabase.getActivity();
-        }
-    };
+Controller.$resolve = {
+    river: function(evanDatabase) {
+        return evanDatabase.getActivity();
+    }
+};
 
-    return Controller;
-});
+export default Controller;
