@@ -5,14 +5,22 @@ requirejs.config({
 define('main', function(require) {
     var angular = require('angular');
     var profile = require('json!profile.json');
+    var elggAccounts = require('elgg/accounts/module').default;
+    var elggBlog = require('elgg/blog/module').default;
+    var elggCore = require('elgg/core/module').default;
+    var elggEvents = require('elgg/events/module').default;
+    var elggPhotos = require('elgg/photos/module').default;
+    var elggPosts = require('elgg/posts/module').default;
+    
+        
     
     var demo = angular.module('demo', [
-        require('elgg/accounts/module').name,
-        require('elgg/blog/module').name,
-        require('elgg/core/module').name,
-        require('elgg/events/module').name,
-        require('elgg/photos/module').name,
-        require('elgg/posts/module').name,
+//         elggAccounts.name,
+//         elggBlog.name,
+        elggCore.name,
+//         elggEvents.name,
+//         elggPhotos.name,
+//         elggPosts.name,
     ]).value('profile', profile).run(function(profile) {
         
         profile.appcache = profile.appcache || {};

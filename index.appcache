@@ -234,6 +234,7 @@ assets/require.js
 assets/snap.css
 assets/snap.js
 assets/text.js
+assets/traceur.js
 favicon.svg
 index.html
 
@@ -242,4 +243,4 @@ NETWORK:
 http://*
 https://*
 
-# hash: 77699bccfc6c39d663615a56788ecb41119633221a21c8f8ff1120781c648880
+# hash: 15eb1e4f191d48bfde154b05eaeab6d073620df39a678f3fe9f465ac070613f8

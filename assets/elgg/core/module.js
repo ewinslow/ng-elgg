@@ -4,9 +4,9 @@ import $sanitize from 'angular-sanitize';
 import $snap from 'angular-snap';
 import $translate from 'angular-translate';
 import angularytics from 'angularytics';
-import accountSettingsPage from './states/settings.account/main';
-import defaultPage from './states/default/main';
-import indexPage from './states/index/main';
+import accountSettingsState from './states/settings.account/main';
+import defaultState from './states/default/main';
+import indexState from './states/index/main';
 
 export default createModule('elgg/core', [
     angular.module('pascalprecht.translate'),
@@ -31,19 +31,15 @@ export default createModule('elgg/core', [
         "elggMenus"
     ],
     "states": {
-        "settings.account": accountSettingsPage,
-        "default": defaultPage,
-        "index": indexPage
+        "settings.account": accountSettingsState,
+        "default": defaultState,
+        "index": indexState
     }
 }).config(function configureAngularytics(AngularyticsProvider) {
     AngularyticsProvider.setEventHandlers(['GoogleUniversal', 'Console']);
 }).run(function loadAndConfigureGoogleAnalytics(profile) {
     var google = profile.google || {};
     var analytics = google.analytics || {};
-    
-    if (!analytics.code || !profile.baseUrl) {
-        return;
-    }
     
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
