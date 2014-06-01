@@ -1,9 +1,12 @@
 define([], function() {
   "use strict";
-  define(function() {
-    return function($stateParams) {
-      this.email = $stateParams.email;
-    };
-  });
-  return {};
+  var $__default = (($traceurRuntime.createClass)(function($stateParams) {
+    this.email = $stateParams.email;
+  }, {}, {}));
+  return {
+    get default() {
+      return $__default;
+    },
+    __esModule: true
+  };
 });
