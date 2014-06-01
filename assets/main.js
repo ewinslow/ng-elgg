@@ -15,12 +15,12 @@ define('main', function(require) {
         
     
     var demo = angular.module('demo', [
-//         elggAccounts.name,
-//         elggBlog.name,
+        elggAccounts.name,
+        elggBlog.name,
         elggCore.name,
-//         elggEvents.name,
-//         elggPhotos.name,
-//         elggPosts.name,
+        elggEvents.name,
+        elggPhotos.name,
+        elggPosts.name,
     ]).value('profile', profile).run(function(profile) {
         
         profile.appcache = profile.appcache || {};

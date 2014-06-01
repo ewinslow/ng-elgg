@@ -1,8 +1,8 @@
-define(function() {
+export default class {
     /**
      * @ngInject
      */
-    return function($stateParams) {
+    constructor($stateParams) {
         this.email = $stateParams.email;
-    };
-});
+    }
+};
